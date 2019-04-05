@@ -6,9 +6,9 @@ baseurl:           "/"
 url:               "https://dydtjr1128.github.io"
 
 # Social Profiles
-twitter_username:  SBootstrap
+
 github_username:   dydtjr1128
-facebook_username: StartBootstrap
+
 disqus_url:
 disqus_id : dydtjr1128
 # Build settings
