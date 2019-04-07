@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "서울 버스 API 적용하기"
-subtitle: "서울 버스 API 적용하기"
+subtitle: "Applying Seoul Bus API"
 date:   2017-05-20 16:35:30 -0900
 background: '/img/posts/07.jpg'
 comments: true

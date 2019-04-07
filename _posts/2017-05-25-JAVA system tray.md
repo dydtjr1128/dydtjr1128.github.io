@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "[JAVA] 시스템 트레이 만들기"
-subtitle: ""
+title:  "자바 시스템 트레이 만들기"
+subtitle: "Creating Java System Tray"
 date:   2017-05-25 11:23:30 -0900
 background: '/img/posts/07.jpg'
 comments: true
