@@ -5,8 +5,8 @@ subtitle: "Change mobile Chrome browser theme color with HTML tags"
 date:   2017-05-20 16:35:30 -0900
 background: '/img/posts/07.jpg'
 comments: true
-categories: Public-API
-tags : Public-API
+categories: WEB
+tags : WEB
 ---
 <style>
 .center {
