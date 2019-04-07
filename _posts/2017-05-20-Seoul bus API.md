@@ -27,7 +27,7 @@ a{
 2. <a target="_blank" href="https://www.data.go.kr/dataset/15000314/openapi.do">https://www.data.go.kr/dataset/15000314/openapi.do</a> 활용신청 누르기
 <img src="/img/Seoul-bus-API/1.png" width="100%"/>
 
-3. 승인이 되면 <a target="_blank" href="http://api.bus.go.kr/index.jsp">http://api.bus.go.kr/index.jsp</a> 에서 사용법 이용해 사용
+3. 승인이 되면 <a target="_blank" href="http://api.bus.go.kr/index.jsp">http://api.bus.go.kr/index.jsp</a> 에서 document를 따라 사용
 
 
 
