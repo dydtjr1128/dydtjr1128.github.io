@@ -13,12 +13,16 @@ th,td {
     text-align: center;
     vertical-align: middle;
 }
+h1 {
+    white-space: nowrap;
+    overflow : hidden;
+}
 </style>
 
 # Data Compression/Decompression
 
 Snappy를 이용하여 이미지를 압축하는 부분을 다루면서, 다양한 압축 알고리즘 이 있으며 각각의 성능 차이가 크다는 것을 알게 되었다.
-
+<div style="overflow: auto">
 <table class="table">
     <thead class="thead-light">
         <tr>
@@ -36,7 +40,8 @@ Snappy를 이용하여 이미지를 압축하는 부분을 다루면서, 다양�
             <td>1380 MB/s</td>        
         </tr>
         <tr>
-            <td>zlib 1.2.11 -1</td>        <td>2.743</td>
+            <td>zlib 1.2.11 -1</td>        
+            <td>2.743</td>
             <td>110 MB/s</td>
             <td>400 MB/s</td>        
         </tr>
@@ -78,5 +83,6 @@ Snappy를 이용하여 이미지를 압축하는 부분을 다루면서, 다양�
         </tr>
     </tbody>
 </table>
+</div>
 Core i7-6700K CPU @ 4.0GHz, using lzbench, an open-source in-memory benchmark by @inikep compiled with gcc 7.3.0<br>
 압축률과 속도가 각각 다르기 때문에 알맞는 상황에 적절한 압축 알고리즘을 사용하여야 한다.
