@@ -42,24 +42,23 @@ layout: default
             {% endif %}
           </a>
           <div class="row">
-				<div class=" col-lg-9 col-md-9 mx-auto">
-					<p class="post-meta">Posted by
-					{% if post.author %}
-					{{ post.author }}
-					{% else %}
-					{{ site.author }}
-					{% endif %}
-					on
-					{{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
-					</p>
-				</div>				
-				<div class="col-lg-3 col-md-3 mx-auto">
-					<div class="notepad-index-post-tags">
-						<a href="{{ site.url }}/categories#{{post.categories}}">{{ post.categories}}</a>                    
-					</div>
-				</div>
-			</div>		
-			
+              <div class=" col-lg-9 col-md-9 mx-auto">
+                <div class="post-meta">Posted by
+                  {% if post.author %}
+                  {{ post.author }}
+                  {% else %}
+                  {{ site.author }}
+                  {% endif %}
+                  on
+                  {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
+                </div>
+              </div>				
+              <div class="col-lg-3 col-md-3 mx-auto">
+                <div class="notepad-index-post-tags">
+                  <a href="{{ site.url }}/categories#{{post.categories}}">{{ post.categories}}</a>                    
+                </div>
+              </div>
+            </div>		
         </article>
 
         <hr>

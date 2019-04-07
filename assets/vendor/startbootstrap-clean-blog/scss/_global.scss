@@ -158,6 +158,11 @@ Start Notepad theme css
     -moz-border-radius: 4px;
     border-radius: 4px;
 }
+.tag-box a:hover {
+    background-color:#800080;
+    border: 0.0625rem solid #800080;
+    color: #ffffff;
+}
 
 .tag-box a span {
     font-size: 10px;
