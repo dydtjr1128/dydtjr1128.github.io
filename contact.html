@@ -5,8 +5,33 @@ description: Have questions? I have answers.
 background: '/img/bg-contact.jpg'
 form: true
 ---
+<style type="text/css">
+  .my_link{
+    text-decoration-line: none !important;
+    font-size : 1.2rem;
+    font-weight: bold;
+    color:#800080;
+  }
+  .my_link:hover {
+      color:#800080;
+  }
+  .my_link>img{
+      filter: invert(10%) sepia(67%) saturate(4135%) hue-rotate(289deg) brightness(122%) contrast(118%);
+  }
+</style>
 
+<p>
+  <h2>Contact Me</h2>
+  <div>
+    <a class ="my_link" href="https://github.com/dydtjr1128"><img src="/img/github-character.png" style="width: 1.5rem"/> Github</a>
+  </div>
+  <div>
+    <a class ="my_link" href="mailto:dydtjr1994@gmail.com" style="text-decoration: none;font-size : 1.2rem;"><img src="/img/mail.png" style="width: 1.5rem"/> E-mail</a>
+  </div>
+</p>
+<!--
 <p>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible!</p>
+
 <form name="sentMessage" id="contactForm" novalidate>
   <div class="control-group">
     <div class="form-group floating-label-form-group controls">
@@ -42,3 +67,4 @@ form: true
     <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
   </div>
 </form>
+-->
