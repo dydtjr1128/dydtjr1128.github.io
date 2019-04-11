@@ -8,9 +8,9 @@ comments: true
 categories: Data-compression
 tags : Data-compression
 lastmod :   2019-04-08 14:30:10 -0900
-sitemap :
-changefreq : daily
-priority : 1.0
+sitemap:
+   changefreq: daily
+   priority: 1.0
 ---
 <style>
 th,td {

@@ -8,9 +8,9 @@ comments: true
 categories: MQTT
 tags : MQTT
 lastmod :   2019-04-08 16:00:15 -0900
-sitemap :
-changefreq : daily
-priority : 1.0
+sitemap:
+   changefreq: daily
+   priority: 1.0
 ---
 <style>
 .center {

@@ -7,10 +7,10 @@ background: '/img/posts/07.jpg'
 comments: true
 categories: MQTT
 tags : MQTT
-lastmod :   2019-04-11 14:49:15 -0900
-sitemap :
-changefreq : daily
-priority : 1.0
+lastmod:   2019-04-11 14:49:15 -0900
+sitemap:
+   changefreq: daily
+   priority: 1.0
 ---
 <style>
 .center {
