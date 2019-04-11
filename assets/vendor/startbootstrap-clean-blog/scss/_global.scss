@@ -197,3 +197,19 @@ Start Notepad theme css
       padding-bottom: 0.3125rem;
       text-align: left;
       float: left; } }
+
+
+
+.center {
+    display: block;
+    margin: auto;
+}
+.contentTitle{
+    border-top:0.2rem solid gray; 
+    border-bottom:0.2rem solid gray; 
+    margin:2rem 30%; 
+    text-align:center; 
+    font-size : 1.7rem;
+    font-weight: bold;
+    padding : 1.2rem 0px;
+}
