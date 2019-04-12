@@ -3,10 +3,9 @@ layout: page
 title: Posts
 background: '/img/bg-post.jpg'
 ---
-
 {% for post in paginator.posts %}
 
-<article class="post-preview">
+<article class="post-preview fadeInDown">
   <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
     <h2 class="post-title">{{ post.title }}</h2>
     {% if post.subtitle %}

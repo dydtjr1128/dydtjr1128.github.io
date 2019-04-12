@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <!-- Page Header -->
 {% if page.background %}
 <header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
@@ -32,7 +31,7 @@ layout: default
         <!-- Home Post List -->
         {% for post in site.posts limit : 5 %}
 
-        <article class="post-preview">
+        <article class="post-preview fadeInDown">
           <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
             <h2 class="post-title">{{ post.title }}</h2>
             {% if post.subtitle %}

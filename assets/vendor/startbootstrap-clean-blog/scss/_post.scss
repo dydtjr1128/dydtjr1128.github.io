@@ -1,5 +1,6 @@
 // Styling for the post page
 .post-preview {
+  visibility: hidden;
   > a {
     color: $gray-900;
     &:focus,
@@ -40,3 +41,62 @@
     }
   }
 }
+.fadeInDown {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  visibility: visible !important; }
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0); } }
+.tag-template .notepad-index-post:first-of-type {
+  padding-top: 3.125rem; }
+  @media only screen and (min-width: 40.063em) {
+    .tag-template .notepad-index-post:first-of-type {
+      padding-top: 4.6875rem; } }
+      
+      
+      
+::-webkit-scrollbar {
+        width: 4px;
+        height: 6px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: rgba(0,0,0,0.5);
+        -webkit-border-radius: 0px;
+        border-radius: 0px;
+    }
+    
+    ::-webkit-scrollbar-thumb:window-inactive {
+        background: rgba(0,0,0,0.2);
+    }
