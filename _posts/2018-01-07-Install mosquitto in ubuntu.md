@@ -2,12 +2,12 @@
 layout: post
 title:  "Ubuntu에 Mosquitto(MQTT Broker) 3분 설치"
 subtitle: "Install Mosquitto (MQTT Broker) on Ubuntu in 3 minutes"
-date:   2018-01-07 17:26:30 -0900
+date:   2018-01-07 17:26:30 +0900
 background: '/img/posts/07.jpg'
 comments: true
 categories: MQTT
 tags : MQTT
-lastmod :   2019-04-08 16:00:15 -0900
+lastmod :   2019-04-08 16:00:15 +0900
 sitemap:
    changefreq: daily
    priority: 1.0

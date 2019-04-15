@@ -2,12 +2,12 @@
 layout: post
 title:  "데이터 압축 알고리즘 비교"
 subtitle: "Data Compression Algorithm Comparison"
-date:   2018-10-29 11:34:13 -0900
+date:   2018-10-29 11:34:13 +0900
 background: '/img/posts/07.jpg'
 comments: true
 categories: Data-compression
 tags : Data-compression
-lastmod :   2019-04-08 14:30:10 -0900
+lastmod :   2019-04-08 14:30:10 +0900
 sitemap:
    changefreq: daily
    priority: 1.0

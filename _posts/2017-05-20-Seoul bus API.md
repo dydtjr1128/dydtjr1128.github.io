@@ -2,12 +2,12 @@
 layout: post
 title:  "서울 버스 API 적용하기"
 subtitle: "Applying Seoul Bus API"
-date:   2017-05-20 16:35:30 -0900
+date:   2017-05-20 16:35:30 +0900
 background: '/img/posts/07.jpg'
 comments: true
 categories: Public-API
 tags : Public-API
-lastmod :   2019-04-08 14:30:10 -0900
+lastmod :   2019-04-08 14:30:10 +0900
 sitemap:
    changefreq: daily
    priority: 1.0
