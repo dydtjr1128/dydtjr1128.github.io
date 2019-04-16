@@ -1,6 +1,9 @@
 // Styling for the post page
 .post-preview {
   visibility: hidden;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom:1px solid rgb(217, 217, 217)  ; 
   > a {
     color: $gray-900;
     &:focus,
@@ -41,6 +44,9 @@
     }
   }
 }
+
+//------------------------------------------------
+// My css
 .fadeInDown {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;

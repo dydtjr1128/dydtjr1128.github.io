@@ -3,7 +3,6 @@ layout: default
 ---
 <!-- Page Header -->
 {% if page.background %}
-
 <header class="masthead --overlay" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
   {% else %}
   <header class="masthead">
@@ -31,7 +30,7 @@ layout: default
         <!-- Home Post List -->
         {% for post in site.posts limit : 5 %}
 
-        <article class="post-preview fadeInDown">
+        <article class="post-preview">
           <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
             <h2 class="post-title">{{ post.title }}</h2>
             {% if post.subtitle %}
@@ -60,8 +59,6 @@ layout: default
             </div>			
         </article>
 
-        <hr>
-
         {% endfor %}
 
         <!-- Pager -->
@@ -72,3 +69,5 @@ layout: default
       </div>
     </div>
   </div>
+<script src="/assets/vendor/jquery/jquery.min.js"></script>
+<script src="/assets/animation.js"></script>

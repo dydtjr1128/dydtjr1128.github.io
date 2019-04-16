@@ -5,7 +5,7 @@ background: '/img/bg-post.jpg'
 ---
 {% for post in paginator.posts %}
 
-<article class="post-preview fadeInDown">
+<article class="post-preview">
   <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
     <h2 class="post-title">{{ post.title }}</h2>
     {% if post.subtitle %}
@@ -33,9 +33,6 @@ background: '/img/bg-post.jpg'
     </div>
   </div>
 </article>
-
-<hr>
-
 {% endfor %}
 
 <!-- Pager -->
@@ -56,3 +53,5 @@ background: '/img/bg-post.jpg'
 </div>
 
 {% endif %}
+<script src="/assets/vendor/jquery/jquery.min.js"></script>
+<script src="/assets/animation.js"></script>
