@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
-
-  {% include head.html %}
-
+<html class="no-js">
+    <style> .js #fouc {display: none} </style> 
+    <script> (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement) </script>
+    {% include head.html %}
   <body>
 
     {% include navbar.html %}
@@ -14,8 +14,8 @@
     {% include footer.html %}
 
     {% include scripts.html %}
-	{% include analytics.html %}
-
+	  {% include analytics.html %}
+    {% include imgLoad.html %}
   </body>
 
 </html>
