@@ -1,8 +1,8 @@
 // Styling for the post page
 .post-preview {
   visibility: hidden;
-  padding-bottom: 1.5rem;
-  margin-bottom: 1.5rem;
+  padding-bottom: 1.7rem;
+  margin-bottom : 1.7rem;
   border-bottom:1px solid rgb(217, 217, 217)  ; 
   > a {
     color: $gray-900;
@@ -13,8 +13,6 @@
     }
     > .post-title {
       font-size: 30px;
-      margin-top: 30px;
-      margin-bottom: 10px;
     }
     > .post-subtitle {
       font-weight: 300;
