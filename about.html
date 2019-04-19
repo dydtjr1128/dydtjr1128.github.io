@@ -15,50 +15,52 @@ div{
 .prize{
     color:dodgerblue;
 }
+div.content{
+    padding:0.7rem 0 0.7rem 0.5rem;
+    color: gray;
+}
+strong{
+    color: black;
+}
+h4{
+    color: #00468C;
+}
+h5{
+    padding-left: 0.7rem;
+}
 </style>
 
-<div>안녕하세요.
-공부하면서 알게된 내용들을 기록하는 블로그입니다.
-</div>
-
-
 <div>
-    <p>
+    <article class="post-preview">
         <h4>ABOUT</h4>
-        <div>
+        <div class="content">
             I am YongSeok Choi, a student in Hansung University.</br>
             My Favorite area is Large-scale Web Application & Performance.
         </div>
-    </p>
-    <hr>
-    <p>
-        <h4>Technology</h4>
-        <p>
-            <strong>DVCS</strong></br>
-            Git, Github
-
-        </p>       
-    </p>
-    <hr>
-    <p>
+    </article>
+    
+    <article class="post-preview">
         <h4>PUBLICATIONS</h4>
-        <p>
-            <strong>Implementation of Multi-Streaming System of Live Video of Drone</strong></br>
+        <div class="content">
+            <strong>Implementation of Multi-Streaming System of Live Video of Drone - <span class="prize">JIIBC</span></strong></br>
             드론 라이브 영상의 다중 스트리밍 시스템 구현</br>
             Kitae Hwang, Jina Kim, <strong>Yongseok Choi</strong>, Joonhee Kim, Hyungmin Kim, Inhwan Jung. (2018).</br>
             The Journal of the Institute of Internet, Broadcasting and Communication, 한국인터넷방송통신학회 논문지, 18(1), 143-149.</br>
-        </p>
-        <p>
-            <strong>Design of Modified MQTT Protocol with Time Filter QoS</strong></br>
+            
+        </div>
+        
+        <div class="content">
+            <strong>Design of Modified MQTT Protocol with Time Filter QoS - <span class="prize">KCC</span></strong></br>
             시간 필터 QoS를 가진 MQTT 프로토콜 설계</br>
             Junhee Kim, Donghee Lee, Kitae Hwang, Hyungmin Kim, Seho Park and <strong>Yongseok Choi</strong>, 2018,</br> 
-            "Design of Modified MQTT Protocol with Time Filter QoS," 한국정보과학회 학술발표논문집, , pp. 410~412.
-        </p>
-    </p>
-    <hr>
-    <p>
+            "Design of Modified MQTT Protocol with Time Filter QoS," 한국정보과학회 학술발표논문집, , pp. 410~412.</br>            
+        </div>
+        
+    </article>
+    
+    <article class="post-preview">
         <h4>PROJECT</h4>
-        <p>
+        <div class="content">
             <strong>Drone Live Video Streaming Solution using Raspberry PI</strong></br>
             Team Project | HIFLY</br>
             We implemented a streaming system which can forward live video stream to multiple users from a Phantom4, a drone made by DJI. 
@@ -78,43 +80,97 @@ div{
         <div class="content">
             <strong>Urgent & Time filter MQTT broker</strong></br>
             <a href="https://github.com/MQTT-HILIGHT"><strong>[Github page]</strong></a>
-        </p>
-    </p>
-    <hr>
-    <p>
-        <h4>ACTIVITIES</h4>
-        <p>
+        </div>
+    </article>
+    
+    <article class="post-preview">
+        <h4>EXPERIENCES</h4>
+        <div class="content">
             <strong>Project supported from Seoul Business Agency, Hansung University</strong></br>
             ‘Development of the Appliance with Messaging Technology underlying Hyper-Connected Society’</br>
             Implemented messaging solution based on real-time location using MQTT protocol.
-        </p>
-        <p>
+        </div>
+        <div class="content">
             <strong>Software Maestor 9th</strong></br>
             과학기술정보통신부, IITP 주관 소프트웨어 마에스트로 9기 연수생</br>
             I was a member of the IoAT(Internet-of-All-Things) team and developed a water proof leisure IoT system called Surfcode using biometric signal detection sensor.
             <a href="https://github.com/Internet-of-All-Things"><strong>[Github page]</strong></a>
-        </p>
-    </p>
-    <hr>
-    <p>
+        </div>
+    </article>
+    
+    <article class="post-preview">
+            <h4>ACTIVITIES</h4>
+
+            <h5>2018</h5>
+            <div class="content">            
+                <ul>                    
+                    <li>2018.08.11 ~ 08.12 <strong>2018 Namyangju IoT Hackathon</strong></li>
+                    <li>2018.06.20 ~ 06.22 <strong>Domestic Conference, KCC2018</strong></li>
+                    <li>2018.06.10 - 09.30 <strong>Seoul City App Contest - YouthCenter</strong></li>
+                    <li>2018.03.11 ~ 09.12 <strong>Hansung University Engineering Contest</strong></li>
+                    <li>2018.03.02 ~ 06.01 <strong>Hansung University Capstone Design - UT-MQTT Broker</strong></li>
+                    <li>2018.01.22 ~ 01.26 <strong>Seongbuk-gu Office App Inventor Assistant</strong></li>
+                    <li>2018.01.15 ~ 01.19 <strong>Hansung University Programming Camp Tutor</strong></li>
+                    <li>2018.01.11 ~ 03.02 <strong>Hansung University HighSuccess Project - DSAIHN</strong></li>
+                </ul>
+            </div>
+            <h5>2017</h5>
+            <div class="content"> 
+                <ul>
+                    <li>2017.10.20 - 12.19 <strong>Seoul City App Contest - Sijangin</strong></li>
+                    <li>2017.10.16 - 12.24 <strong>Tutoring Tutor - Operating System</strong></li>
+                    <li>2017.10.16 - 12.22 <strong>Hansung University Naksan Study - HIFLY</strong></li>
+                    <li>2017.10.16 - 12.15 <strong>QNA Tutoring Tutor</strong></li>
+                    <li>2017.06.30 - 07.01 <strong>Arduino Development Camp - Hackathon RC Car</strong></li>
+                    <li>2017.05.28 - 12.25 <strong>Embedded Software Contest - HIFLY</strong></li>
+                    <li>2017.05.28 - 09.29 <strong>Hansung University Engineering Contest - HIFLY</strong></li>
+                    <li>2017.01.16 - 01.20 <strong>Hansung University Programming Camp</strong></li>
+                    <li>2017.03.20 - 07.25 <strong>Hansung University Naksan Study - CKY Cinema</strong></li>
+                </ul>
+            </div>
+
+            <h5>2016</h5>
+            <div class="content">
+                <ul>
+                    <li>2016.03.22 - 05.24 <strong>Tutoring Tuty - Algorithm</strong></li>                
+                </ul>     
+            </div>    
+    </article>
+    <article class="post-preview">
         <h4>AWORDS</h4>
         
-        <h5>2017</h5>
-        <div>
+        <h5>2018</h5>
+        <div class="content">
             <ul>
-                <li>2017.03.20 ~ 07.25 <strong>Hansung University Naksan Study <span class="prize">2nd Encouragement Prize</span></strong></br>
-                    - CKY Cinema(Movie Reservation Web Application)</br></li>
-                <li>2017.05.28 ~ 09.29 <strong>Engineering Contest <span class="prize">3rd Silver Prize</span></strong></br>
-                    - HIFLY Drone live streaming solution</br></li>
-                <li>2017.05.28 ~ 09.29 <strong>Engineering Contest <span class="prize">한국카본 Prize</span></strong></br>
-                    - HIFLY Drone live streaming solution</br></li>
-                <li>2017.05.28 ~ 12.25 <strong>Embedded Software Contest <span class="prize">2nd Excellence Prize</span></strong></br>
-                    - HIFLY Drone video streaming solution using raspberry pi</br></li>
-            </ul>
-            
+                <li>2018.09.21 <strong>Hansung University Engineering Contest <span class="prize">2nd Grand Prize</span></strong></br>
+                    - Design and Implementation of urgent and time filter in mosquitto</br></li>
+                <li>2018.08.12 <strong>2018 Namyangju IoT Hackathon <span class="prize">2nd Excellence Prize</span></strong></br>
+                    - Fire detection IoT system service design</br></li>
+                <li>2018.07.31 <strong>KCC 2018 <span class="prize">Excellent presentation paper prize</span></strong></br>
+                    - Design of Modified MQTT Protocol with Time Filter QoS</br></li>
+                <li>2018.06.01 <strong>Hansung University Capstone Design <span class="prize">2nd Grand Prize</span></strong></br>
+                    - Urgent & Time filter broker</br></li>
+                <li>2018.01.17 <strong>Hansung University Naksan Study <span class="prize">1st Excellence Prize</span></strong></br>
+                    - HIFLY Drone video streaming solution</br></li>
+            </ul>            
         </div>
-    </p>
-    <hr>
+
+
+        <h5>2017</h5>
+        <div class="content">
+            <ul>
+                <li>2017.07.25 <strong>Hansung University Naksan Study <span class="prize">2nd Encouragement Prize</span></strong></br>
+                    - CKY Cinema(Movie Reservation Web Application)</br></li>
+                <li>2017.09.29 <strong>Hansung University Engineering Contest <span class="prize">3rd Silver Prize</span></strong></br>
+                    - HIFLY</br></li>
+                <li>2017.09.29 <strong>Hansung University Engineering Contest <span class="prize">한국카본 Prize</span></strong></br>
+                    - HIFLY</br></li>
+                <li>2017.12.25 <strong>Embedded Software Contest <span class="prize">2nd Excellence Prize</span></strong></br>
+                    - HIFLY Drone video streaming solution using raspberry pi</br></li>
+            </ul>            
+        </div>
+    </article>
+    
         </br> 
         <a href="mailto:dydtjr1994@gmail.com" target="_blank">
             <img src="https://img.shields.io/badge/E--mail-Yongseok%20choi-yellow.svg">
