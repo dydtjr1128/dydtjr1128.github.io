@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "자바에서 숫자에 언더바 표시"
+title:  "자바에서 숫자에 언더바(_) 표시"
 subtitle: "Show underscore in JAVA number"
 date: 2019-04-15 11:45:13 +0900
 background: '/img/posts/07.jpg'
