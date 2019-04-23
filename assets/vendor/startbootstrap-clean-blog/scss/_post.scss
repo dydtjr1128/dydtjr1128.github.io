@@ -146,3 +146,10 @@
       animation-delay: 0.2s;
     }   
  
+body > div > div > div > p > a{
+   text-decoration:none !important;
+}
+body > div > div > div > p .center {
+  display: block;
+  margin: auto;
+}
