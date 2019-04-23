@@ -12,12 +12,6 @@ sitemap:
    changefreq: daily
    priority: 1.0
 ---
-<style>
-.center {
-    display: block;
-    margin: auto;
-}
-</style>
 
 # Ajax를 이용한 이용한 데이터 전달
 

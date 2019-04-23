@@ -12,12 +12,6 @@ sitemap:
    changefreq: daily
    priority: 1.0
 ---
-<style>
-.center {
-    display: block;
-    margin: auto;
-}
-</style>
 
 # HTML 태그로 모바일 크롬 브라우저 테마 색상 바꾸기
 

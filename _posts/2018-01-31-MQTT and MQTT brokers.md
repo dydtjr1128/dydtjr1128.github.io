@@ -12,10 +12,6 @@ sitemap:
    changefreq: daily
    priority: 1.0
 ---
-<style>
-
-</style>
-
 <br>
 
 ![/img/Ch](/img/MQTT/MQTT-Broker-structure.png){:width="60%"}{:.center}

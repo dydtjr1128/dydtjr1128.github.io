@@ -12,12 +12,6 @@ sitemap:
    changefreq: daily
    priority: 1.0
 ---
-<style>
-.center {
-    display: block;
-    margin: auto;
-}
-</style>
 
 ## Ubuntu에서 Mosquitto(MQTT Broker) 설치하기  
 <br>
