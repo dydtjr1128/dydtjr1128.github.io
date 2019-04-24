@@ -14,7 +14,7 @@ sitemap:
 ---
 
 <div class="contentTitle">
-String과 Literal
+String 객체와 String 리터럴
 </div>
 
 ```java
@@ -27,21 +27,21 @@ System.out.println("a==b : " + (a == b));
 System.out.println("a==c : " + (a == c));
 System.out.println("a.equals(b) : " + a.equals(b));
 System.out.println("a.equals(c) : " + a.equals(c));
-HashSet<String> set = new HashSet<>();
-set.add(a);
-set.add(b);
-set.add(c);
-System.out.println(set.size());
+b = c.intern();
+System.out.println(a==b);
+System.out.println(a==c);
 ```
+
 이 코드의 결과값은 어떻게 나올까?
 
 ```java
-a.hashCode(), b.hashCode : 3052799 3052799 3052799
-a==b : true
-a==c : false
-a.equals(b) : true
-a.equals(c) : true
-1
+a.hashCode(), b.hashCode : 3052799 3052799 3052799 //(1)
+a==b : true  //(2)
+a==c : false //(3)
+a.equals(b) : true //(4)
+a.equals(c) : true //(5)
+true //(6)
+false //(7)
 ```
 
 이렇게 출력된다.  
