@@ -3,7 +3,7 @@ layout: post
 title:  "JAVA String 리터럴과 객체 차이점"
 subtitle: "Differences between JAVA String Literal and Object"
 date: 2019-04-23 17:26:10 +0900
-background: '/img/Kafka/kafka-logo.png'
+background: '/img/posts/07.jpg'
 comments: true
 categories: Kafka
 tags : Kafka
