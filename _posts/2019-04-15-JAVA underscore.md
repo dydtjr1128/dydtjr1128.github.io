@@ -5,8 +5,8 @@ subtitle: "Show underscore in JAVA number"
 date: 2019-04-15 11:45:13 +0900
 background: '/img/posts/07.jpg'
 comments: true
-categories: JAVA
-tags : JAVA
+categories: Java
+tags : Java
 lastmod :   2019-04-15 14:20:10 +0900
 sitemap:
    changefreq: daily

@@ -5,8 +5,8 @@ subtitle: "Differences between JAVA String Literal and Object"
 date: 2019-04-23 17:26:10 +0900
 background: '/img/posts/07.jpg'
 comments: true
-categories: Kafka
-tags : Kafka
+categories: Java
+tags : Java
 lastmod :   2019-04-23 17:26:10 +0900
 sitemap:
    changefreq: daily
