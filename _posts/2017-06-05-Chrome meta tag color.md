@@ -17,7 +17,7 @@ sitemap:
 
 ![/img/Ch](/img/Chrome-metatag/1.jpg){:width="35%"}{:.center}
 
-```
+```html
 <head>
     <meta name="theme-color" content="#800080">
 </head>
