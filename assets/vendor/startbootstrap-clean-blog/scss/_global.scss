@@ -3,7 +3,7 @@ body {
   font-size: 20px;
   color: $gray-900;
   //@include serif-font;
-  font-family: "Nanum Gothic", sans-serif;
+  font-family: 'NanumBarunGothic', sans-serif;
 }
 
 p {
@@ -84,9 +84,9 @@ img::-moz-selection {
 Start Notepad theme css
 
 */
-.post-list {
+.post-list {    
     padding: 0;
-    margin: 0;
+    margin-bottom: 1.5rem;
     list-style-type: none;
 }
 

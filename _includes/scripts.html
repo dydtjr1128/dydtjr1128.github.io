@@ -10,25 +10,6 @@
     });
 </script>
 {% if page.url contains 'contact' %}
-  <!-- Async Hangul Font loader-->
-  <script type="text/javascript">
-    WebFontConfig = {
-      custom: {
-          families: ['Nanum Gothic'],
-          urls: ['http://fonts.googleapis.com/earlyaccess/nanumgothic.css']
-      }
-    };
-    (function() {
-      var wf = document.createElement('script');
-      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-        '://ajax.googleapis.com/ajax/libs/webfont/1.4.10/webfont.js';
-      wf.type = 'text/javascript';
-      wf.async = 'true';
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(wf, s);
-    })(); 
-   </script>
-
   <!-- Form Validation -->
   <script src="{{"/assets/vendor/startbootstrap-clean-blog/js/jqBootstrapValidation.js" | relative_url }}"></script>
   <!-- Google form submission -->
