@@ -10,7 +10,7 @@ code[class*="language-"],
 pre[class*="language-"] {
 	color: #ccc;
 	background: none;
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-family: 'D2 coding', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 	font-size: 1rem;
 	text-align: left;
 	white-space: pre;
@@ -154,7 +154,7 @@ pre[data-line] {
 		padding: 0 .5em;
 		background-color: hsla(24, 20%, 50%,.4);
 		color: hsl(24, 20%, 95%);
-		font: bold 65%/1.5 sans-serif;
+		font: bold 65%/1.5 'D2 coding', sans-serif;
 		text-align: center;
 		vertical-align: .3em;
 		border-radius: 999px;
@@ -243,7 +243,7 @@ div.code-toolbar > .toolbar button {
 	background: none;
 	border: 0;
 	color: inherit;
-	font: inherit;
+	font: 'D2 coding', inherit;
 	line-height: normal;
 	overflow: visible;
 	padding: 0;
