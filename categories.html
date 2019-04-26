@@ -14,7 +14,8 @@ permalink: /categories/
   {% assign category_list = nil %}
 </ul>
 
-{% for category in site.categories %}
+{% assign sorted_categories = site.categories | sort %}
+{% for category in sorted_categories %}
 <h2 id="{{ category[0] }}">{{ category[0] | capitalize }}</h2>
 <ul class="post-list">
     {% assign pages_list = category[1] %}
