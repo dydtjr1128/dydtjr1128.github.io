@@ -25,4 +25,40 @@
 
     </url>
   {% endfor %}
+  
+	<url>
+		<loc>
+		https://dydtjr1128.github.io/
+		</loc>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>
+		https://dydtjr1128.github.io/about
+		</loc>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>
+		https://dydtjr1128.github.io/posts/
+		</loc>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>
+		https://dydtjr1128.github.io/contact
+		</loc>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>
+		https://dydtjr1128.github.io/categories/
+		</loc>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>	
 </urlset>
