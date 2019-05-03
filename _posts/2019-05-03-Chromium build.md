@@ -34,7 +34,7 @@ sitemap:
 ### 목차
 
 <a href="#no0">0. 환경설정</a><br>
-<a href="#no1">1. </a><br>
+<a href="#no1">1. 코드 다운로드</a><br>
 
 
 <h3 id="no0">0. 환경설정</h3>
@@ -55,12 +55,75 @@ sitemap:
 - 비쥬얼스튜디오 최신버전
 - 윈도우7 이상(10 추천)
 
-#### Visual studio
+#### Visual studio 사전 설정
+
 비쥬얼스튜디오는 2017 또는 2019 버전을 사용해야한다.
 
-![Visual studio setting](/img/Chromium/Visual studio setting.png){:width="100%"}{:.center}
+![Visual studio setting](/img/Chromium/vs_setting.png){:width="100%"}{:.center}
+
+반드시
+
+- Desktop development with C++
+- MFC/ATL support
+  
+이 두가지 부분은 설치 해주어야 한다.
+
+#### depot_tools 사전 설정
+
+1. depot_tools 다운로드 => [[다운로드 링크]](https://storage.googleapis.com/chrome-infra/depot_tools.zip "depot_tools 다운로드 링크")
+2. `C:\src`에 압축해제
+3. `C:\src\depot_tools` 경로를 환경변수 PATH에 추가
+4. ★★ 3번의 내용은 반드시 아나콘다, Python등의 PATH보다 위쪽에 추가되어야함!
+5. 환경변수에 `DEPOT_TOOLS_WIN_TOOLCHAIN`, 값은 `0` 추가
+
+<h2 id="no1">코드 다운로드</h2>
+
+- git 설정
+
+   ```cmd
+   git config --global user.name "My Name"
+   git config --global user.email "my-name@chromium.org"
+   git config --global core.autocrlf false
+   git config --global core.filemode false
+   git config --global branch.autosetuprebase always
+   ```
+
+- 소스코드 받을 폴더 생성 및 이동(경로는 달라도 됨)
+
+  ```cmd
+   mkdir C:\Users\유저명\chromium && cd C:\Users\유저명\chromium
+  ```
+
+- 소스코드 받기
+
+   ```cmd
+   fetch chromium
+   ```
+
+```
+1. cmd에서 `gclient` 실행
+```
 
 
+
+
+간혹 중간에 아래와같은 오류를 볼 수 있다.  
+크로미움 코드가 enterprise의 경로를 우선적으로 잡아서 발생하는 오류이다.
+
+![Visual studio setting](/img/Chromium/vs_path_error.png){:width="100%"}{:.center}
+
+자신이 Visual studio community를 사용중이라면  
+`C:\Users\유저명\chromium\src\build` 경로에 존재하는 `vs_toolchain.py`의 내용을 아래와같이 바꿔주어야 한다.
+
+![Visual studio setting](/img/Chromium/vs_toolchain_before_box.png){:width="100%"}{:.center}
+
+![Visual studio setting](/img/Chromium/vs_toolchain_after.png){:width="100%"}{:.center}
+
+
+그 후
+```cmd
+gclient sync
+```
 ### References
 
 <pre>
