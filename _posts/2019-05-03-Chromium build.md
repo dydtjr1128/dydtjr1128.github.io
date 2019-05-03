@@ -5,8 +5,8 @@ subtitle: "Build Chromium"
 date: 2019-05-03 13:33:30 +0900
 background: '/img/Chromium/Chromium_bg.png'
 comments: true
-categories: Spring
-tags : Spring
+categories: Chromium
+tags : Chromium
 lastmod :   2019-05-03 13:33:30 +0900
 sitemap:
    changefreq: daily
@@ -35,9 +35,10 @@ sitemap:
 
 <a href="#no0">0. 환경설정</a><br>
 <a href="#no1">1. 코드 다운로드</a><br>
+<a href="#no2">2. 코드 빌드</a><br>
 
 
-<h3 id="no0">0. 환경설정</h3>
+<h2 id="no0">0. 환경설정</h2>
 
 #### 필자의 노트북 환경
 
@@ -75,8 +76,17 @@ sitemap:
 3. `C:\src\depot_tools` 경로를 환경변수 PATH에 추가
 4. ★★ 3번의 내용은 반드시 아나콘다, Python등의 PATH보다 위쪽에 추가되어야함!
 5. 환경변수에 `DEPOT_TOOLS_WIN_TOOLCHAIN`, 값은 `0` 추가
+6. cmd에 `gclient` 치기 (★★★ 오래걸림)
 
-<h2 id="no1">코드 다운로드</h2>
+- 참고
+  - 중간에 중단되거나 소스 업데이트가 필요한 경우 입력
+
+   ```cmd
+   gclient sync
+   ```
+
+
+<h2 id="no1">1. 코드 다운로드</h2>
 
 - git 설정
 
@@ -94,38 +104,71 @@ sitemap:
    mkdir C:\Users\유저명\chromium && cd C:\Users\유저명\chromium
   ```
 
-- 소스코드 받기
+- 소스코드 받기(★★★ 굉장히 오래걸림)
 
    ```cmd
    fetch chromium
    ```
 
-```
-1. cmd에서 `gclient` 실행
-```
+   간혹 중간에 아래와같은 오류를 볼 수도 있다.  
+   크로미움 코드가 enterprise의 경로를 우선적으로 잡아서 발생하는 오류이다.
+
+   ![Visual studio setting](/img/Chromium/vs_path_error.png){:width="100%"}{:.center}
+
+   자신이 Visual studio community를 사용중이라면  
+   `C:\Users\유저명\chromium\src\build` 경로에 존재하는 `vs_toolchain.py`의 내용을 아래와같이 바꿔주어야 한다.
+
+   ![Visual studio setting](/img/Chromium/vs_toolchain_before_box.png){:width="100%"}{:.center}
+
+   ![Visual studio setting](/img/Chromium/vs_toolchain_after.png){:width="100%"}{:.center}
+
+   그 후
+
+   ```cmd
+   gclient sync
+   ```
+
+- src로 이동
+
+   ```cmd
+   cd src
+   ```
+
+<h2 id="no2">2. 코드 빌드</h2>
+
+- 소스코드 gen
+
+   ```cmd
+   gn args out/Default
+   ```
+
+- gen args 설정. 위의 명령어 실행 후 뜨는 메모장에 다음과 같이 기입
+
+   ```txt
+   is_debug = true
+   is_component_build = true
+   blink_symbol_level = 0
+   ```
+
+- 컴파일
+
+   ```cmd
+   ninja -C out/Default ui/views/examples:views_examples_exe
+   ```
+
+   노트북으로 2시간 정도 소요
+
+- 예제파일 실행
+
+   ```cmd
+    .\out\Default\views_examples_exe
+   ```
 
 
 
 
-간혹 중간에 아래와같은 오류를 볼 수 있다.  
-크로미움 코드가 enterprise의 경로를 우선적으로 잡아서 발생하는 오류이다.
-
-![Visual studio setting](/img/Chromium/vs_path_error.png){:width="100%"}{:.center}
-
-자신이 Visual studio community를 사용중이라면  
-`C:\Users\유저명\chromium\src\build` 경로에 존재하는 `vs_toolchain.py`의 내용을 아래와같이 바꿔주어야 한다.
-
-![Visual studio setting](/img/Chromium/vs_toolchain_before_box.png){:width="100%"}{:.center}
-
-![Visual studio setting](/img/Chromium/vs_toolchain_after.png){:width="100%"}{:.center}
-
-
-그 후
-```cmd
-gclient sync
-```
 ### References
 
 <pre>
-   <a href="https://chromium.googlesource.com/chromium/src/+/master/docs/windows_build_instructions.md">https://chromium.googlesource.com/chromium/src/+/master/docs/windows_build_instructions.md</a>
+<a href="https://chromium.googlesource.com/chromium/src/+/master/docs/windows_build_instructions.md">https://chromium.googlesource.com/chromium/src/+/master/docs/windows_build_instructions.md</a>
 </pre>
