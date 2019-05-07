@@ -153,7 +153,7 @@ sitemap:
 - 컴파일
 
    ```cmd
-   ninja -C out/Default ui/views/examples:views_examples_exe
+   gn gen --ide=vs --filters=//ui/views/examples:views_examples_exe out\Default
    ```
 
    노트북으로 2시간 정도 소요
@@ -165,6 +165,9 @@ sitemap:
    ```
 
 <h2 id="no3">3. Visual studio에서 디버깅 하기</h2>
+
+상단의 컴파일 과정을 거치면 `C:\Users\유저명\chromium\src\out\Default` 경로에 all.sln 파일이 생기는데, 이를 실행하면 된다.
+
 
 ### References
 
