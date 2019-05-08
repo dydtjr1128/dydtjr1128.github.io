@@ -12,6 +12,11 @@ sitemap:
    changefreq: daily
    priority: 1.0
 ---
+<style>
+   a{
+      text-decoration:none !important;
+   }
+</style>
 
 <div class="contentTitle">
 크로미움(Chromium) 빌드하기
@@ -31,12 +36,14 @@ sitemap:
 
 <hr>
 
-### 목차
-
+### 목차( Click! )
+<strong>
 <a href="#no0">0. 환경설정</a><br>
 <a href="#no1">1. 코드 다운로드</a><br>
 <a href="#no2">2. 코드 빌드</a><br>
 <a href="#no3">3. Visual studio에서 디버깅 하기</a><br>
+</strong>
+<hr>
 
 <h2 id="no0">0. 환경설정</h2>
 
@@ -71,7 +78,7 @@ sitemap:
 
 #### depot_tools 사전 설정
 
-1. depot_tools 다운로드 => [[다운로드 링크]](https://storage.googleapis.com/chrome-infra/depot_tools.zip "depot_tools 다운로드 링크")
+1. depot_tools 다운로드 => **[[다운로드 링크]](https://storage.googleapis.com/chrome-infra/depot_tools.zip "depot_tools 다운로드 링크")**
 2. `C:\src`에 압축해제
 3. `C:\src\depot_tools` 경로를 환경변수 PATH에 추가
 4. ★★ 3번의 내용은 반드시 아나콘다, Python등의 PATH보다 위쪽에 추가되어야함!
@@ -144,7 +151,7 @@ sitemap:
 
 - gen args 설정. 위의 명령어 실행 후 뜨는 메모장에 다음과 같이 기입
 
-   ```txt
+   ```text
    is_debug = true
    is_component_build = true
    blink_symbol_level = 0
@@ -166,7 +173,7 @@ sitemap:
 
 <h2 id="no3">3. Visual studio에서 디버깅 하기</h2>
 
-상단의 컴파일 과정을 거치면 `C:\Users\유저명\chromium\src\out\Default` 경로에 all.sln 파일이 생기는데, 이를 실행하면 된다.
+상단의 컴파일 과정을 거치면 `C:\Users\유저명\chromium\src\out\Default` 경로에 `all.sln` 파일이 생기는데, 이를 실행하면 된다.
 
 
 ### References
