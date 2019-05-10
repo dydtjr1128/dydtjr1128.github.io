@@ -1,15 +1,15 @@
-<script src="{{"/assets/vendor/jquery/jquery.min.js" | relative_url }}"></script>
+
 <script src="{{"/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" | relative_url }}"></script>
 <script src="{{"/assets/vendor/startbootstrap-clean-blog/js/clean-blog.min.js" | relative_url }}"></script>
 
 <script src="{{"/assets/scripts.js" | relative_url }}"></script>
+<script src="{{"/assets/jquery.lazyload.min.js" | relative_url }}"></script>
+
 <script src="/assets/codeStyle/prism.js"></script>
 <script>
-    $(document).ready( function() {
-        $('img').lazyload();
-    });
+  $("img").lazyload();    
 </script>
-{% if page.url contains 'contact' %}
+{% if page.url contains 'contact' %}  
   <!-- Form Validation -->
   <script src="{{"/assets/vendor/startbootstrap-clean-blog/js/jqBootstrapValidation.js" | relative_url }}"></script>
   <!-- Google form submission -->

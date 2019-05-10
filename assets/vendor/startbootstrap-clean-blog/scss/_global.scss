@@ -124,6 +124,30 @@ Start Notepad theme css
     }
 }
 
+.selected-tab{
+  color: #800080 !important;
+}
+
+.round-box{
+  padding: 4px 0;
+  margin: 0;
+  overflow: hidden;
+  list-style: none;
+  *zoom: 1;
+}
+.round-box a:hover {
+  background-color:#800080;
+  border: 0.0625rem solid #800080;
+  color: #ffffff;
+}
+.round-box a {
+  padding: 2px 5px;
+  text-decoration: none;
+  border: 0.0625rem solid white;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
 
 .tag-box {
     padding: 4px 0;

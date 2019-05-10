@@ -19,8 +19,11 @@ layout: default
             <span class="meta">Posted by
               <a href="#">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a>
               on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html
-              content=page.content %}</span>
-          </div>
+              content=page.content %}</span><br>
+            <span class="meta">
+                Categories : <span class="round-box lnline"><a href="{{ site.url }}/categories#{{page.categories}}">{{page.categories}}</a></span>
+            </span>
+          </div>          
         </div>
       </div>
     </div>

@@ -9,21 +9,43 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="{{"/" | relative_url }}">Home</a>
+          <a class="nav-link ys-tab" href="{{"/" | relative_url }}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{"/about" | relative_url }}">About</a>
+          <a class="nav-link ys-tab" href="{{"/about" | relative_url }}">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{"/posts" | relative_url }}">Posts</a>
+          <a class="nav-link ys-tab" href="{{"/posts" | relative_url }}">Posts</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{"/contact" | relative_url }}">Contact</a>
+          <a class="nav-link ys-tab" href="{{"/contact" | relative_url }}">Contact</a>
         </li>
-		<li class="nav-item">
-          <a class="nav-link" href="{{"/categories" | relative_url }}">Categories</a>
+		    <li class="nav-item">
+          <a class="nav-link ys-tab" href="{{"/categories" | relative_url }}">Categories</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+
+{% if page.url == '/' %}
+<script>
+  $($(".ys-tab")[0]).addClass("selected-tab");  
+</script>
+{% elsif page.url contains 'about' %}
+<script>
+    $($(".ys-tab")[1]).addClass("selected-tab");  
+</script>
+{% elsif page.url contains 'posts' %}
+<script>
+    $($(".ys-tab")[2]).addClass("selected-tab");
+</script>
+{% elsif page.url contains 'contact' %}
+<script>
+    $($(".ys-tab")[3]).addClass("selected-tab");
+</script>
+{% elsif page.url contains 'categories' %}
+<script>
+    $($(".ys-tab")[4]).addClass("selected-tab");
+</script>
+{% endif %}
