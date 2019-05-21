@@ -176,6 +176,12 @@ sitemap:
 상단의 컴파일 과정을 거치면 `C:\Users\유저명\chromium\src\out\Default` 경로에 `all.sln` 파일이 생기는데, 이를 실행하면 된다.
 
 
+## toolbar 수정 결과
+
+![Chromium change](/img/Chromium/change/change_chromium.png){:width="70%"}{:.center}
+
+hello라는 버튼을 toolbar에 추가해 보았다.
+
 ### References
 
 <pre>
