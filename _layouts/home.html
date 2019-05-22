@@ -38,25 +38,26 @@ layout: default
             {% else %}
             <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
             {% endif %}
-          </a>
-          <div class="row">
-              <div class=" col-lg-9 col-md-9 mx-auto">
-                <div class="post-meta">Posted by
-                  {% if post.author %}
-                  {{ post.author }}
-                  {% else %}
-                  {{ site.author }}
-                  {% endif %}
-                  on
-                  {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
-                </div>
-              </div>				
-              <div class="col-lg-3 col-md-3 mx-auto">
-                <div class="notepad-index-post-tags">
-                  <a href="{{ site.url }}/categories#{{post.categories}}">{{ post.categories}}</a>                    
-                </div>
-              </div>
-            </div>			
+            <div class="post-content-preview">
+                {% if post.lang == 'en' %}
+                    {{ post.content | strip_html | truncate:300 }}
+                {% else %}
+                    {{ post.content | strip_html | truncate:200 }}
+                {% endif %}
+            </div>
+          </a>          
+          <div class="post-meta">Posted by
+              {% if post.author %}
+              {{ post.author }}
+              {% else %}
+              {{ site.author }}
+              {% endif %}
+              on
+              {{ post.date | date: '%F' }} &middot; {% include read_time.html content=post.content %}
+          </div>			
+          <div class="post-category">
+              <a href="{{ site.url }}/categories#{{post.categories}}">{{ post.categories}}</a>                    
+          </div>			
         </article>
 
         {% endfor %}

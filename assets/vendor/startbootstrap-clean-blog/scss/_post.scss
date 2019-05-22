@@ -10,17 +10,30 @@
     &:hover {
       text-decoration: none;
       color: $primary;
+      .post-content-preview{
+         color: $primary;
+      }
     }
     > .post-title {
-      font-size: 30px;
+      font-size: 26px;
     }
     > .post-subtitle {
+      font-size: 18px;
       font-weight: 300;
       margin: 0 0 10px;
     }
+    /*
+    > .post-content-preview:hover {
+      color: $primary;
+    }*/
+    > .post-content-preview {
+      font-size: 13px;
+      font-style: italic;
+      color: #a3a3a3;
+    }
   }
-   .post-meta {
-    font-size: 18px;
+  > .post-meta {
+    font-size: 15px;
     font-style: italic;
     margin-top: 0.1rem;
     color: $gray-600;
@@ -34,10 +47,38 @@
       }
     }
   }
+  > .post-category {
+    font-size: 0.8125rem;
+    float: none;
+    color: black;
+    text-align: right;
+    padding-top: 0;
+    padding-bottom: 0; }
+  
+  .post-category a {
+      display: inline-block;
+      padding: 0.2125rem 0.9875rem;
+      margin-right: 0.1875rem;
+      color: $gray-600;
+      border: 0.0625rem solid $gray-600;
+      border-radius: 999em;
+      margin-bottom: 0.3125rem; }
+  
+  .post-category a:hover {
+    text-decoration: none;
+    border: 0.0625rem solid $mycolor;
+    color : $mycolor;
+  }
   @media only screen and (min-width: 768px) {
     > a {
       > .post-title {
-        font-size: 36px;
+        font-size: 30px;
+      }
+      > .post-subtitle {
+        font-size: 18px;
+      }
+      .post-content-preview {
+        font-size: 14px;
       }
     }
   }
@@ -45,6 +86,16 @@
 
 //------------------------------------------------
 // My css
+
+  
+@media only screen and (min-width: 768px) {
+  .post-category {
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    text-align: left;
+    float: left; } 
+}
+
 .fadeInDown {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;

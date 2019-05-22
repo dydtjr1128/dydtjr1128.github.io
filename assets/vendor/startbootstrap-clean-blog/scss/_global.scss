@@ -149,7 +149,7 @@ Start Notepad theme css
   border-radius: 4px;
 }
 
-.tag-box {
+.category-list {
     padding: 4px 0;
     margin: 0;
     overflow: hidden;
@@ -157,72 +157,45 @@ Start Notepad theme css
     *zoom: 1;
 }
 
-.tag-box:after,.tag-box:before {
+.category-list:after,.category-list:before {
     display: table;
     line-height: 0;
     content: "";
 }
 
-.tag-box:after {
+.category-list:after {
     clear: both;
 }
 
-.tag-box.inline li {
+.category-list.inline li {
     float: left;
     font-size: 14px;
     line-height: 2.5;
 }
 
-.tag-box a {
+.category-list a {
+    font-family: 'D2 coding', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
     padding: 4px 6px;
     margin: 2px;
     text-decoration: none;
-    border: 0.0625rem solid black;
+    border: 0.0625rem solid #0085A1;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
-    border-radius: 4px;
+    border-radius:999em;
+    color: white;
+    background-color:#0085A1;
 }
-.tag-box a:hover {
+.category-list a:hover {
     background-color:#800080;
     border: 0.0625rem solid #800080;
-    color: #ffffff;
+    color: white;
 }
 
-.tag-box a span {
+.category-list a span {
     font-size: 10px;
     vertical-align: super;
-    color: black;
+    color: white;
 }
-.notepad-index-post-tags {
-    font-size: 0.8125rem;
-    float: none;
-    color: black;
-	text-align: right;
-    padding-top: 0;
-    padding-bottom: 0; }
-
-.notepad-index-post-tags a {
-      display: inline-block;
-      padding: 0.2125rem 0.9875rem;
-      margin-right: 0.1875rem;
-      color: $gray-600;
-      border: 0.0625rem solid $gray-600;
-      border-radius: 0.125rem;
-      margin-bottom: 0.3125rem; }
-
-.notepad-index-post-tags a:hover {
-		text-decoration: none;
-        color: #800080;
-        border: 0.0625rem solid #800080; }
-		
-@media only screen and (min-width: 40.063em) {
-    .notepad-content .notepad-index-post .notepad-index-post-tags {
-      padding-top: 0.3125rem;
-      padding-bottom: 0.3125rem;
-      text-align: left;
-      float: left; } }
-
-
 
 .center {
     display: block;
