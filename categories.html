@@ -6,7 +6,7 @@ background: '/img/bg-about.jpg'
 permalink: /categories/
 ---
 
-<ul class="tag-box inline">
+<ul class="category-list inline">
   {% assign category_list = site.categories %}
     {% for category in category_list %}
     <li><a href="#{{ category[0] }}">{{ category[0] | capitalize }} <span>{{ category[1].size }}</span></a></li>
