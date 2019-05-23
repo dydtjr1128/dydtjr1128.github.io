@@ -21,7 +21,8 @@ h4,
 h5,
 h6 {
   font-weight: 800;
-  @include sans-serif-font;
+  font-family: 'Arial', 'D2 coding', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  //@include sans-serif-font;
 }
 
 a {
@@ -84,34 +85,34 @@ img::-moz-selection {
 Start Notepad theme css
 
 */
-.post-list {    
+.category-preview {    
     padding: 0;
     margin-bottom: 1.5rem;
     list-style-type: none;
 }
 
-.post-list li {
+.category-preview li {
     padding: 8px 0;
     border-bottom: 1px solid #ccc;
     border-bottom: 1px solid rgba(0,0,0,.1);
     *zoom: 1;
 }
 
-.post-list li:after,.post-list li:before {
+.category-preview li:after,.category-preview li:before {
     display: table;
     line-height: 0;
     content: "";
 }
 
-.post-list li:after {
+.category-preview li:after {
     clear: both;
 }
 
-.post-list a>span {
-    float: right;
+.category-preview a{
+    text-decoration: none;
 }
 
-.post-list .entry-date {
+.category-preview .entry-date {
     display: none;
     font-size: 14px;
     text-transform: uppercase;
@@ -119,7 +120,7 @@ Start Notepad theme css
 }
 
 @media only screen and (min-width:48em) {
-    .post-list .entry-date {
+    .category-preview .entry-date {
         display: inline;
     }
 }
@@ -137,16 +138,16 @@ Start Notepad theme css
 }
 .round-box a:hover {
   background-color:#800080;
-  border: 0.0625rem solid #800080;
+  border: 1px solid #800080;
   color: #ffffff;
 }
 .round-box a {
+  font-size: 14px;
+  font-family: 'Arial', 'D2 coding', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   padding: 2px 5px;
   text-decoration: none;
-  border: 0.0625rem solid white;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  border: 1px solid white;
+  border-radius: 999em;
 }
 
 .category-list {
@@ -174,7 +175,7 @@ Start Notepad theme css
 }
 
 .category-list a {
-    font-family: 'D2 coding', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-family: 'Arial', 'D2 coding', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
     padding: 4px 6px;
     margin: 2px;
     text-decoration: none;
@@ -209,4 +210,14 @@ Start Notepad theme css
     font-size : 1.7rem;
     font-weight: bold;
     padding : 1.2rem 0px;
+}
+
+
+.category-name{
+  color : $mycolor;
+  font-family: 'Arial', 'D2 coding', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+.category-subtitle{
+  font-family: 'Arial', 'D2 coding', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size : 14px;
 }

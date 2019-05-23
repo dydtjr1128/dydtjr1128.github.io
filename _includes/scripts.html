@@ -7,8 +7,17 @@
 
 <script src="/assets/codeStyle/prism.js"></script>
 <script>
-  $("img").lazyload();    
+  $("img").lazyload();
+  $('a').click(function(){
+    $('html, body').animate({
+      scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+
+    return false;
+  });
+  
 </script>
+
 {% if page.url contains 'contact' %}  
   <!-- Form Validation -->
   <script src="{{"/assets/vendor/startbootstrap-clean-blog/js/jqBootstrapValidation.js" | relative_url }}"></script>
