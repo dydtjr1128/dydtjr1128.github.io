@@ -5,8 +5,8 @@ subtitle: "What is Smart Pointer?"
 date: 2019-05-10 18:17:30 +0900
 background: '/img/posts/07.jpg'
 comments: true
-categories: C++
-tags : C++
+categories: CPP
+tags : CPP
 lastmod : 2019-05-10 18:17:30 +0900
 sitemap:
    changefreq: daily
