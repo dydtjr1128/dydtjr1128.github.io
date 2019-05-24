@@ -3,7 +3,9 @@ body {
   font-size: 20px;
   color: $gray-900;
   //@include serif-font;
-  font-family: 'NanumBarunGothic', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", 'NanumBarunGothic', 'D2 coding', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 p {
@@ -21,7 +23,7 @@ h4,
 h5,
 h6 {
   font-weight: 800;
-  font-family: 'Arial', 'D2 coding', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", 'NanumBarunGothic', 'D2 coding', sans-serif;
   //@include sans-serif-font;
 }
 
@@ -143,7 +145,7 @@ Start Notepad theme css
 }
 .round-box a {
   font-size: 14px;
-  font-family: 'Arial', 'D2 coding', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", 'NanumBarunGothic', 'D2 coding', sans-serif;
   padding: 2px 5px;
   text-decoration: none;
   border: 1px solid white;
@@ -175,7 +177,7 @@ Start Notepad theme css
 }
 
 .category-list a {
-    font-family: 'Arial', 'D2 coding', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", 'NanumBarunGothic', 'D2 coding', sans-serif;
     padding: 4px 6px;
     margin: 2px;
     text-decoration: none;
@@ -215,9 +217,60 @@ Start Notepad theme css
 
 .category-name{
   color : $mycolor;
-  font-family: 'Arial', 'D2 coding', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", 'NanumBarunGothic', 'D2 coding', sans-serif;
 }
 .category-subtitle{
-  font-family: 'Arial', 'D2 coding', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", 'NanumBarunGothic', 'D2 coding', sans-serif;
   font-size : 14px;
 }
+
+
+.page-fullscreen .masthead {
+  position: fixed;
+  top:0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  > .container{
+    height: 100%;
+    > .row {
+      height: 100%;
+      >div{
+        height: 100%;
+        text-align: center;
+        display:table;        
+      }
+      .page-heading{
+        display: table-cell;
+        vertical-align: middle;
+        margin : auto;
+      }
+    }
+  }
+}
+.page-fullscreen #tag-heading {
+  position: fixed;
+  left: 0;
+
+  flex-direction: column;
+}
+.page-fullscreen footer {
+  position: absolute;
+  bottom:0;
+  width: 100%;
+
+  color: #fff;
+}
+.text-muted {  
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", 'NanumBarunGothic', 'D2 coding', sans-serif;
+}
+.page-fullscreen footer .text-muted {  
+  color: #fff !important;
+}
+.page-fullscreen footer .copyright a {
+  color: #fff;
+}
+.page-fullscreen footer .copyright a:hover {
+  color: #ddd;
+}
+
