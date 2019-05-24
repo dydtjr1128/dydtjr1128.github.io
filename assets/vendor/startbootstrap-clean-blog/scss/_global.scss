@@ -248,11 +248,23 @@ Start Notepad theme css
     }
   }
 }
-.page-fullscreen #tag-heading {
-  position: fixed;
-  left: 0;
 
-  flex-direction: column;
+code.highlighter-rouge{
+  font-family: "Fira Code",Menlo,Monaco,Consolas,"Courier New",monospace;
+  padding: 2px 4px;
+  font-size: 90%;
+  line-height: 1.7;
+  box-sizing: border-box;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+  overflow-x: hidden;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.text-muted {  
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", 'NanumBarunGothic', 'D2 coding', sans-serif;
 }
 .page-fullscreen footer {
   position: absolute;
@@ -260,9 +272,6 @@ Start Notepad theme css
   width: 100%;
 
   color: #fff;
-}
-.text-muted {  
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", 'NanumBarunGothic', 'D2 coding', sans-serif;
 }
 .page-fullscreen footer .text-muted {  
   color: #fff !important;
