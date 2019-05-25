@@ -4,8 +4,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>
-    {% if page.title %}{{ page.title | escape }} - {{ site.title | escape }}
-    {% else %}{{ site.title | escape }}{% endif %}
+    {% if page.url == '/' %}  
+      {{ site.title | escape }}
+    {% else %}
+      {% if page.title %}{{ page.title | escape }} - {{ site.title | escape }}
+      {% else %}{{ site.title | escape }}{% endif %}
+    {% endif %}
+    
   </title>
 
   <link href='/assets/fonts//d2coding.css' rel='stylesheet' type='text/css'>
