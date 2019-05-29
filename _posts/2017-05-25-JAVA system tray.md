@@ -5,6 +5,7 @@ subtitle: "Creating Java System Tray"
 date:   2017-05-25 11:23:30 +0900
 background: '/img/posts/07.jpg'
 comments: true
+catalog: true
 categories: Java
 tags : Java
 lastmod :   2019-04-08 14:30:10 +0900

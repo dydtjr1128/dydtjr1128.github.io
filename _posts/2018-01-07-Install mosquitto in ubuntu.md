@@ -5,6 +5,7 @@ subtitle: "Install Mosquitto (MQTT Broker) on Ubuntu in 3 minutes"
 date:   2018-01-07 17:26:30 +0900
 background: '/img/posts/07.jpg'
 comments: true
+catalog: true
 categories: MQTT
 tags : MQTT
 lastmod :   2019-04-08 16:00:15 +0900

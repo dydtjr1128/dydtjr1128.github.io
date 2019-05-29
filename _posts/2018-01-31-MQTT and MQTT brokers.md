@@ -5,6 +5,7 @@ subtitle: "MQTT protocol & MQTT brokers"
 date:   2018-01-31 16:14:30 +0900
 background: '/img/posts/07.jpg'
 comments: true
+catalog: true
 categories: MQTT
 tags : MQTT
 lastmod : 2019-04-11 17:31:33 +0900

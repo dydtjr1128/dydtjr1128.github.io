@@ -5,6 +5,7 @@ subtitle: "Understanding Spring AOP"
 date: 2019-04-26 13:47:30 +0900
 background: '/img/posts/07.jpg'
 comments: true
+catalog: true
 categories: Spring
 tags : Spring
 lastmod :   2019-04-26 13:47:30 +0900

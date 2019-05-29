@@ -5,6 +5,7 @@ subtitle: "Build Chromium"
 date: 2019-05-03 13:33:30 +0900
 background: '/img/Chromium/Chromium_bg.png'
 comments: true
+catalog: true
 categories: Chromium
 tags : Chromium
 lastmod :   2019-05-04 19:17:30 +0900

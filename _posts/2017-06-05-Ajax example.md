@@ -5,6 +5,7 @@ subtitle: "Data Transfer Using Ajax"
 date:   2017-06-05 14:23:30 +0900
 background: '/img/posts/07.jpg'
 comments: true
+catalog: true
 categories: WEB
 tags : WEB
 lastmod :   2019-04-08 14:30:10 +0900
