@@ -2,7 +2,7 @@
 <script src="{{"/assets/vendor/startbootstrap-clean-blog/js/clean-blog.min.js" | relative_url }}"></script>
 
 <script src="{{"/assets/scripts.js" | relative_url }}"></script>
-<script src="{{"/assets/jquery.lazyload.min.js" | relative_url }}"></script>
+<script src="{{"/assets/vendor/jquery/jquery.lazyload.min.js" | relative_url }}"></script>
 
 <script src="/assets/codeStyle/prism.js"></script>
 
@@ -135,7 +135,7 @@
     });
     $('.side-catalog').toggleClass("fold")
   }));
-  async("{{ 'assets/vendor/jquery/jquery.nav.js' | prepend: site.baseurl }}", function () {
+  async("{{"/assets/vendor/jquery/jquery.nav.js" | relative_url }}", function () {
         $('.catalog-body').onePageNav({
             currentClass: "active",
             changeHash: !1,
