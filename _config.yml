@@ -11,6 +11,13 @@ github_username:   dydtjr1128
 
 disqus_url:
 disqus_id : dydtjr1128
+
+#Sidebar setting
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+
 # Build settings
 markdown:          kramdown
 paginate:          7

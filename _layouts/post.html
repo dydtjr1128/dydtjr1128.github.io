@@ -3,7 +3,8 @@ layout: default
 ---
 <!-- Page Header -->
 {% if page.background %}
-<header class="masthead --overlay" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+<header class="masthead --overlay"
+  style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
   {% else %}
   <header class="masthead">
     {% endif %}
@@ -13,17 +14,18 @@ layout: default
         <div class="col-lg-10 col-md-10 mx-auto">
           <div class="post-heading">
             <h2>{{ page.title }}</h1>
-            {% if page.subtitle %}
-            <h3 class="subheading">{{ page.subtitle }}</h2>
+              {% if page.subtitle %}
+              <h3 class="subheading">{{ page.subtitle }}</h2>
             {% endif %}
             <span class="meta">Posted by
               <a href="#">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a>
               on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html
               content=page.content %}</span>
             <span class="meta">
-                <span class="round-box lnline"><a href="{{ site.url }}/categories#{{page.categories}}">{{page.categories}}</a></span>
+              <span class="round-box lnline"><a
+                  href="{{ site.url }}/categories#{{page.categories}}">{{page.categories}}</a></span>
             </span>
-          </div>          
+          </div>
         </div>
       </div>
     </div>
@@ -31,27 +33,62 @@ layout: default
 
   <div class="container">
     <div class="row">
-      <div class="col-lg-10 col-md-10 mx-auto">        
-        {{ content }}        
-        
+      <div class="
+      post-container
+      col-lg-10 offset-lg-1
+      col-md-10 offset-md-1">
+        {{ content }}
+
         <hr>
 
         <div class="clearfix">
 
           {% if page.previous.url %}
-          <a class="btn btn-primary float-left" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}"
-            data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">&larr; Previous<span class="d-none d-md-inline">
+          <a class="btn btn-primary float-left"
+            href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip"
+            data-placement="top" title="{{ page.previous.title }}">&larr; Previous<span class="d-none d-md-inline">
               Post</span></a>
           {% endif %}
           {% if page.next.url %}
           <a class="btn btn-primary float-right" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}"
-            data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Next<span class="d-none d-md-inline">
+            data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Next<span
+              class="d-none d-md-inline">
               Post</span> &rarr;</a>
           {% endif %}
-		
+
         </div>
         <hr>
-		    {% include disqus_comments.html %}
+        {% include disqus_comments.html %}
       </div>
+      <!-- Side bar start -->
+      <!-- Side Catalog Container -->
+      {% if page.catalog %}      
+      <div class="
+          col-lg-1 offset-lg-0
+          visible-lg-block
+          sidebar-container
+          catalog-container">
+        <div class="side-catalog">
+          <hr class="hidden-sm hidden-xs">
+          <h5>
+            <a class="catalog-toggle" href="#">CATALOG</a>
+          </h5>
+          <ul class="catalog-body"></ul>
+        </div>
+      </div>
+      {% endif %}
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+        <!-- Featured Tags -->
+        {% include featured-tags.html bottom=true %}
+      </div>
+      <!--End side bar--->
     </div>
   </div>
+
+  
+  

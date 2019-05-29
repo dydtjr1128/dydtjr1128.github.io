@@ -1,58 +1,58 @@
 ---
 layout: default
 ---
- <!-- Page Header -->
- {% include main_header.html %}
+<!-- Page Header -->
+{% include main_header.html %}
 
-  <!-- Page Content -->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-10 col-md-10 mx-auto">
+<!-- Page Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-10 col-md-10 mx-auto">
 
-        {{ content }}
+      {{ content }}
 
-        <!-- Home Post List -->
-        {% for post in site.posts limit : 5 %}
+      <!-- Home Post List -->
+      {% for post in site.posts limit : 5 %}
 
-        <article class="post-preview">
-          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-            <h2 class="post-title">{{ post.title }}</h2>
-            {% if post.subtitle %}
-            <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+      <article class="post-preview">
+        <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+          <h2 class="post-title">{{ post.title }}</h2>
+          {% if post.subtitle %}
+          <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+          {% else %}
+          <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
+          {% endif %}
+          <div class="post-content-preview">
+            {% if post.lang == 'en' %}
+            {{ post.content | strip_html | truncate:300 }}
             {% else %}
-            <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
+            {{ post.content | strip_html | truncate:200 }}
             {% endif %}
-            <div class="post-content-preview">
-                {% if post.lang == 'en' %}
-                    {{ post.content | strip_html | truncate:300 }}
-                {% else %}
-                    {{ post.content | strip_html | truncate:200 }}
-                {% endif %}
-            </div>
-          </a>          
-          <div class="post-meta">Posted by
-              {% if post.author %}
-              {{ post.author }}
-              {% else %}
-              {{ site.author }}
-              {% endif %}
-              on
-              {{ post.date | date: '%F' }} &middot; {% include read_time.html content=post.content %}
-          </div>			
-          <div class="post-category">
-              <a href="{{ site.url }}/categories#{{post.categories}}">{{ post.categories}}</a>                    
-          </div>			
-        </article>
-
-        {% endfor %}
-
-        <!-- Pager -->
-        <div class="clearfix">
-          <a class="btn btn-primary float-right" href="{{"/posts" | relative_url }}">View All Posts &rarr;</a>
+          </div>
+        </a>
+        <div class="post-meta">Posted by
+          {% if post.author %}
+          {{ post.author }}
+          {% else %}
+          {{ site.author }}
+          {% endif %}
+          on
+          {{ post.date | date: '%F' }} &middot; {% include read_time.html content=post.content %}
         </div>
+        <div class="post-category">
+          <a href="{{ site.url }}/categories#{{post.categories}}">{{ post.categories}}</a>
+        </div>
+      </article>
 
+      {% endfor %}
+
+      <!-- Pager -->
+      <div class="clearfix">
+        <a class="btn btn-primary float-right" href="{{"/posts" | relative_url }}">View All Posts &rarr;</a>
       </div>
+
     </div>
   </div>
+</div>
 <script src="/assets/vendor/jquery/jquery.min.js"></script>
 <script src="/assets/animation.js"></script>
