@@ -263,6 +263,10 @@ div.code-toolbar > .toolbar span {
 	box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
 	border-radius: .5em;
 }
+div.code-toolbar .vglnk{
+	color: #7ec699;
+	text-decoration: none;
+}
 
 div.code-toolbar > .toolbar a:hover,
 div.code-toolbar > .toolbar a:focus,
