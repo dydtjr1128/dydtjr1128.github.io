@@ -152,5 +152,15 @@
     });
 
 </script>
-
+{% else%}
+<script>
+  $("img").lazyload();
+  $('a').click(function(){
+    $('html, body').animate({
+      scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+    return false;
+  });
+  
+</script>
 {% endif %}
