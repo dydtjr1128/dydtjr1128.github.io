@@ -126,14 +126,14 @@ constexpr int AGE = 30;
 `const`는 런타임 상수(Runtime constant)이며 `constexpr`은 컴파일 시간 상수(Compile-time constant)이다.
 
 ```cpp
-int i = 10, int j = 20;//OK
+int i = 10, j = 20;//OK
 const int AGE = 30; //OK
 const int AGE2 = i + j; //OK
 constexpr int AGE3 = 26;//OK
 constexpr int AGE4 = i + j;//ERROR!
-constexpr int AGE4 = 10 + 16;//OK
+constexpr int AGE5 = 10 + 16;//OK
 constexpr int a = 20, b = 30;//OK
-constexpr int AGE5 = a + b;//OK
+constexpr int AGE6 = a + b;//OK
 ```
 위처럼 `constexpr`이라는 한정자는 컴파일 시간에 값이 결정되어야 하기 때문에 런타임중 값이 결정되는 i, j를 통한 초기화가 불가능하다.그밖에 사용자의 키보드 입력등으로 런타임중에 정해지는 값들 또한 `constexpr`에 사용 할 수 없다.
 
