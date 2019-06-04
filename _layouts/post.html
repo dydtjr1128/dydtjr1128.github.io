@@ -59,10 +59,19 @@ layout: default
         </div>
         <hr>
         {% include disqus_comments.html %}
+        
+        <!-- bottom Container -->
+        <div class="
+        sidebar-container">
+          <!-- Featured Tags -->
+          {% include featured-tags.html bottom=true %}
+        </div>
+        <!--End bottom bar--->
+
       </div>
       <!-- Side bar start -->
       <!-- Side Catalog Container -->
-      {% if page.catalog %}      
+      {% if page.catalog %}
       <div class="
           col-lg-1 offset-lg-0
           .d-none .d-lg-block .d-xl-none
@@ -77,18 +86,6 @@ layout: default
         </div>
       </div>
       {% endif %}
-
-      <!-- Sidebar Container -->
-      <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                sidebar-container">
-        <!-- Featured Tags -->
-        {% include featured-tags.html bottom=true %}
-      </div>
       <!--End side bar--->
     </div>
   </div>
-
-  
-  
