@@ -138,6 +138,25 @@ decltype(auto) MakeAndProcessObject(const TBuilder& builder){// -> decltype(buil
 
 즉, 적절한 타입 자동 추론 기능으로 리턴하고 싶다면 decltype을 이용한 후위 반환 형식을 지정해 주거나 deltyppe(auto)를 사용해 리턴 시켜주어야 한다.
 
+### Summary
+
+```cpp
+decltype(auto) func(int t) {
+    return t + 10;
+}
+
+int i=10;                           // 선언
+int&& f();                          // universial reference
+auto ex1 = i;                       // => (int ex1 = i)
+decltype(i) ex2 = i;                // => (int ex2 = i)
+auto ex3 = (i);                     // => (int ex3 = i)
+decltype((i)) ex4 = i;              // => (int& ex4 = i)
+auto ex5 = func;                    // => function pointer, int (__cdecl*)(int)
+decltype(func(3)) ex6 = func(3);    // => (int ex6 = 13)
+auto ex7 = func();                  // => (int ex7 = i)
+decltype(f()) ex8 = f();            // => (int&& ex8 = i)
+```
+
 ### References
 
 <pre>
