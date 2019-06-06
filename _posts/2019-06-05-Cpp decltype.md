@@ -22,8 +22,8 @@ decltype
 
 `decltype()`은 `auto`와 찰떡궁합이라고 할정도로 같이 쓰인다. C++11부터 타입을 추론할 수 있는 `auto`와 `decltype()`이 지원되었는데, 이러한 매커니즘이 제공됨으로써 더욱 간결하고 효율적인 코드 작성이 가능해졌다. 둘 다 컴파일러가 인지하는 타입의 자료형을 보고 동작한다.
 
-함수 원형 : `decltype( expression )`
-C++14 이상 : `decltype(auto)` 사용 가능
+함수 원형 : `decltype( expression )`  
+C++14 이상 : `decltype(auto)` 사용 가능  
 C++11 이상 : `decltype(expression)` 사용 가능
 
 `decltype()`은 declared type(선언된 형식)의 줄임말로 주어진 이름이나 표현식의 구체적인 타입을 알려주는 키워드이다.
