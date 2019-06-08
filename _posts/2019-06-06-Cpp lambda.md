@@ -79,9 +79,100 @@ int main(){
 
 ### 3. Lambda
 
+![lambda](/img/cpp/lambda.png){:width="100%"}{:.center}
+
+위의 사진처럼 람다는
+
+`[변수 캡쳐](받을 인자)->리턴타입{함수}(넘길 인자)`
+
+의 형태를 띄고 있다.
+
+```cpp
+int main(){
+    int a = 10;
+    int b = 20;
+    int c = 30;
+    int result = [](int a, int b)->int {return a + b; }(a, b);
+    int result2 = [=]()->int {return a + b; }();
+    int result3 = [=,&a,&b]()->int {return a + b+c; }();
+    auto result4 = [](int d)->decltype(auto) {return d * 30; }(a);
+    int result5 = [a, &b]()->int {return a + b;}();
+    [&b](){ b *= 6; }();// =>동일 [](int &v) {v *= 6;}(b);
+    //[b]() {b *= 6; }();//err! 참조가 아닌 값으로 가져와 *만 할 수 없음
+
+    std::cout << "result  : " << result << std::endl;
+    std::cout << "result2 : " << result2 << std::endl;
+    std::cout << "result3 : " << result3 << std::endl;
+    std::cout << "result4 : " << result4 << std::endl;
+    std::cout << "result5 : " << result5 << std::endl;
+    std::cout << "a  : " << a << std::endl;//a : 10
+    std::cout << "b  : " << b << std::endl;//b : 120
+}
+
+```
+
+[변수 캡쳐] : 현재 람다 함수에서 사용할 외부의 변수를 의미한다.
+
+- [] : 아무 변수도 사용하지 않겠다는 의미
+- [=] : 해당 함수에 존재하는 모든 변수를 값으로 가져와 사용 하겠다는 의미
+- [&] : 해당 함수에 존재하는 모든 변수를 레퍼런스로 가져와 사용 하겠다는 의미
+- [&, a, b] : 해당 함수에 존재하는 모든 변수를 레퍼런스로 가져와 사용하고 a,b는 값으로 가져와 사용
+- [=, &a, &b] : 해당 함수에 존재하는 모든 변수를 값으로 가져와 사용하고 a,b는 러퍼런스로 가져와 사용
+- [a, &b] : a와 b만 가져와 사용하되 a는 값으로, b는 레퍼런스로 가져와 사용
+
+(받을 인자) : ​부분은 말 그대로 함수에서 받는 인자들이다
+> `void func(int a, int b)` 에서 `(int a, int b)` 부분이다.
+> 받을 인자가 없다면 `()`로 두면 된다.
+
+->리턴타입 : void, int 와 같이 함수의 리턴형을 명시하는 부분이다.
+> void라면 ->와 함깨 생략 가능하다.
+> delctype(auto)와 같이 타입 추론형식도 사용가능하다.
+
+{함수} : 함수의 몸체 영역으로 만들고자 하는 코드의 구현부분이 들어가는부분이다.
+
+(넘길 인자) : 호출하는 함수에서 넘겨주는 값들이다 `func(3,5);` 에서 3,5를 넘겨주는것과 같다.
+
+#### 3.1 Lambda 함수 중복
+
+```cpp
+int a = 10, b = 20;
+int result = [&]()->int{
+    return [&]()->int{ return a+b;}();
+}();
+```
+
+람다 함수 내부에 또다른 람다 함수를 중복 시킬 수 있다.
+
+#### 3.2 클래스 내부의 Lambda 함수
+
+```cpp
+class Adder {
+private:
+    int a;
+public:
+    Adder(int a) {
+        this->a = a;
+    }
+    int addNum(int num) {
+        return [=]()->int { return a + num; }();
+    }
+    int addNum2(int num) {
+        return [&]()->int { return a + num; }();
+    }
+};
+```
+
+클래스 내부에서도 람다 함수를 이용한 함수를 구현 할 수 있다.
+
+#### 3.3 Lambda 함수 포인터
+
+```cpp
+auto myFunction = []{std::cout << "This is my function"<< std::endl;};
+```
+
 ### References
 
 <pre>
-<a href="https://docs.microsoft.com/en-us/cpp/cpp/decltype-cpp?view=vs-2019">https://docs.microsoft.com/en-us/cpp/cpp/decltype-cpp?view=vs-2019</a>
-<a href="http://egloos.zum.com/sweeper/v/3148281">http://egloos.zum.com/sweeper/v/3148281/a>
+<a href="https://docs.microsoft.com/ko-kr/cpp/cpp/examples-of-lambda-expressions?view=vs-2019">https://docs.microsoft.com/ko-kr/cpp/cpp/examples-of-lambda-expressions?view=vs-2019</a>
+<a href="https://modoocode.com/196">https://modoocode.com/196</a>
 </pre>
