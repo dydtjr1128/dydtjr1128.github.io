@@ -48,53 +48,55 @@ C++03의 `auto_ptr`은 `unique_ptr`을 만들려던 시도의 실패작이므로
 using namespace std;
 class Song {
 private:
-	string title;
-	string artist;
-	unique_ptr<list<string>>  producers;//Song class는 unique_ptr을 소유.
+    string title;
+    string artist;
+    unique_ptr<list<string>>  producers;//Song class는 unique_ptr을 소유.
 public:
-	// list<string> 기본 생성자와 make_unique를 이용한 초기화
-	Song(string artist, string title) : producers(make_unique<list<string>>()) {
-		this->artist = artist;
-		this->title = title;		
-	}
-	string getTitle() {
-		return title;
-	}
-	string getArtist() {
-		return artist;
-	}
+    // list<string> 기본 생성자와 make_unique를 이용한 초기화
+    Song(string artist, string title) : producers(make_unique<list<string>>()) {
+        this->artist = artist;
+        this->title = title;        
+    }
+    string getTitle() {
+        return title;
+    }
+    string getArtist() {
+        return artist;
+    }
 };
 unique_ptr<Song> SongFactory(const string& artist, const string& title)
 {
-	return make_unique<Song>(artist, title);
+    return make_unique<Song>(artist, title);
 }
 
 void SongVector()
 {
-	vector<unique_ptr<Song>> songs;
-	//unique_ptr 생성 및 vector에 추가
-	songs.push_back(make_unique<Song>("Anne-Marie", "2002"));
-	songs.push_back(make_unique<Song>("Namie Amuro", "Funky Town"));
-	songs.push_back(SongFactory("Twice","FANCY"));
+    vector<unique_ptr<Song>> songs;
+    //unique_ptr 생성 및 vector에 추가
+    songs.push_back(make_unique<Song>("Anne-Marie", "2002"));
+    songs.push_back(make_unique<Song>("Namie Amuro", "Funky Town"));
+    songs.push_back(SongFactory("Twice","FANCY"));
 
-	auto song = make_unique<Song>("Ayumi Hamasaki", "Poker Face");
-	
-	unique_ptr<Song> song2 = std::move(song);//song은 "Ayumi Hamasaki" & "Poker Face"에 접근 할 수 없다.
-	
-	//songs.push_back(song2);//에러! song2는 song2라는 레퍼런스가 연결을 맺고 있으므로 move를 통해 연결을 옮겨주어야 한다.
-	songs.push_back(std::move(song2));
+    auto song = make_unique<Song>("Ayumi Hamasaki", "Poker Face");
 
-	for (const auto& song : songs)
-	{
-		printf("Artist: %15s Title: %s\n", song->getArtist().c_str(), song->getTitle().c_str());
-	}
-	
-	song.reset(); // song이 가리키고 있는 메모리 영역을 삭제함.
+    unique_ptr<Song> song2 = std::move(song);//song은 "Ayumi Hamasaki" & "Poker Face"에 접근 할 수 없다.
+
+    //songs.push_back(song2);//에러! song2는 song2라는 레퍼런스가 연결을 맺고 있으므로 move를 통해 연결을 옮겨주어야 한다.
+    songs.push_back(std::move(song2));
+
+    for (const auto& song : songs)
+    {
+        printf("Artist: %15s Title: %s\n", song->getArtist().c_str(), song->getTitle().c_str());
+    }
+
+    song.reset(); // song이 가리키고 있는 메모리 영역을 삭제함.
 }
 int main() {
-	SongVector();
+    SongVector();
 }
 ```
+
+그밖에 `std::unique_ptr::release`를 이용해서 `Song *relSong = song.release();`을 이용해 사용권을 해제 할 수 있다. 그러나 이경우는 `delete(relSong);`처럼 `delete`키워드를 이용하여 수동으로 메모리를 해제 해 주어야 한다.
 
 ### 2. shared_ptr
 
@@ -113,38 +115,38 @@ int main() {
 using namespace std;
 class Song {
 private:
-	string title;
-	string artist;
+    string title;
+    string artist;
 public:
-	Song(string artist, string title) {
-		this->artist = artist;
-		this->title = title;
-	}
-	string getTitle() {
-		return title;
-	}
-	string getArtist() {
-		return artist;
-	}
+    Song(string artist, string title) {
+        this->artist = artist;
+        this->title = title;
+    }
+    string getTitle() {
+        return title;
+    }
+    string getArtist() {
+        return artist;
+    }
 };
 
 void SongVector()
 {
-	//shared_ptr 생성 방법
-	auto sp1 = make_shared<Song>("The Beatles", "Im Happy Just to Dance With You");
+    //shared_ptr 생성 방법
+    auto sp1 = make_shared<Song>("The Beatles", "Im Happy Just to Dance With You");
 
-	shared_ptr<Song> sp2(new Song("Twice", "Fancy"));
+    shared_ptr<Song> sp2(new Song("Twice", "Fancy"));
 
-	shared_ptr<Song> sp3(nullptr);
-	sp3 = make_shared<Song>("Elton John", "I'm Still Standing");
+    shared_ptr<Song> sp3(nullptr);
+    sp3 = make_shared<Song>("Elton John", "I'm Still Standing");
 
-	//shared_ptr 변경 및 초기화 방법
-	auto sp4(sp2);//복사 생성자를 이용한 초기화 ref_count++
-	auto sp5 = sp2;//sp5에 sp2 할당 초기화 ref_count++
-	cout << sp5.use_count() << endl;//3
+    //shared_ptr 변경 및 초기화 방법
+    auto sp4(sp2);//복사 생성자를 이용한 초기화 ref_count++
+    auto sp5 = sp2;//sp5에 sp2 할당 초기화 ref_count++
+    cout << sp5.use_count() << endl;//3
 }
 int main() {
-	SongVector();
+    SongVector();
 }
 ```
 
