@@ -62,7 +62,7 @@ int* ptr2 = &foobar();  // error. 우측값의 주소는 참조할 수 없다.
 b = 42;               // 42(상수)는 우측값이다.
 ```
 
-#### 2.1 Example2
+#### 2.2 Example2
 
 ```cpp
 int& func(int &a){
