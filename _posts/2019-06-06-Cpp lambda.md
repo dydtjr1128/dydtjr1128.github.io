@@ -79,7 +79,7 @@ int main(){
 
 ### 3. Lambda
 
-![lambda](/img/cpp/lambda.png){:width="100%"}{:.center}
+![lambda](/img/Cpp/lambda.png){:width="100%"}{:.center}
 
 위의 사진처럼 람다는
 
