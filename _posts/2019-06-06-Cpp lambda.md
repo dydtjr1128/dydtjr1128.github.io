@@ -20,7 +20,7 @@ Lambda
 
 ### 1. Intro
 
-`lamda`는 C++11부터 지원이 되었으며 Functor나 for-each를 이용한 반복등을 이용한 함수를 깔끔하고 쉽게 만들기 위한것이다.
+`lambda`는 C++11부터 지원이 되었으며 Functor나 for-each를 이용한 반복등을 이용한 함수를 깔끔하고 쉽게 만들기 위한것이다.
 
 ### 2. 펑터(Functor)
 
