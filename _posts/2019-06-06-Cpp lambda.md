@@ -95,8 +95,10 @@ int main(){
     int result = [](int a, int b)->int {return a + b; }(a, b);
     int result2 = [=]()->int {return a + b; }();
     int result3 = [=,&a,&b]()->int {return a + b+c; }();
-    auto result4 = [](int d)->decltype(auto) {return d * 30; }(a);
+    auto result4 = [](int d)->decltype(auto) {return d * 30; }(a);// a를 대입해서 나온결과값이 result4
     int result5 = [a, &b]()->int {return a + b;}();
+    auto result6 = [](int d)->decltype(auto) {return d * 30; };//result6는 함수 포인터
+
     [&b](){ b *= 6; }();// =>동일 [](int &v) {v *= 6;}(b);
     //[b]() {b *= 6; }();//err! 참조가 아닌 값으로 가져와 *만 할 수 없음
 
@@ -107,6 +109,7 @@ int main(){
     std::cout << "result5 : " << result5 << std::endl;
     std::cout << "a  : " << a << std::endl;//a : 10
     std::cout << "b  : " << b << std::endl;//b : 120
+    std::cout << result6(10) << std::endl;
 }
 
 ```
