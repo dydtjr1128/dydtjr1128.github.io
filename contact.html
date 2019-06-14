@@ -6,27 +6,31 @@ background: '/img/bg-contact.jpg'
 form: true
 ---
 <style type="text/css">
-  .my_link{
+  .my_link {
     text-decoration-line: none !important;
-    font-size : 1.2rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    color:#800080;
+    color: #800080;
   }
+
   .my_link:hover {
-      color:#800080;
+    color: #800080;
   }
-  .my_link>img{
-      filter: invert(10%) sepia(67%) saturate(4135%) hue-rotate(289deg) brightness(122%) contrast(118%);
+
+  .my_link>img {
+    filter: invert(10%) sepia(67%) saturate(4135%) hue-rotate(289deg) brightness(122%) contrast(118%);
   }
 </style>
 
 <p>
   <h2>Contact Me</h2>
   <div>
-    <a class ="my_link" href="https://github.com/dydtjr1128"><img src="/img/github-character.png" style="width: 1.5rem"/> Github</a>
+    <a class="my_link" href="https://github.com/dydtjr1128"><img src="/img/github-character.png"
+        style="width: 1.5rem" /> Github</a>
   </div>
   <div>
-    <a class ="my_link" href="mailto:dydtjr1994@gmail.com" style="text-decoration: none;font-size : 1.2rem;"><img src="/img/mail.png" style="width: 1.5rem"/> E-mail</a>
+    <a class="my_link" href="mailto:dydtjr1994@gmail.com" style="text-decoration: none;font-size : 1.2rem;"><img
+        src="/img/mail.png" style="width: 1.5rem" /> E-mail</a>
   </div>
 </p>
 
@@ -36,32 +40,36 @@ form: true
   <div class="control-group">
     <div class="form-group floating-label-form-group controls">
       <label>Name</label>
-      <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
+      <input type="text" class="form-control" placeholder="Name" id="name" required
+        data-validation-required-message="Please enter your name.">
       <p class="help-block text-danger"></p>
     </div>
   </div>
   <div class="control-group">
     <div class="form-group floating-label-form-group controls">
       <label>Email Address</label>
-      <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
+      <input type="email" class="form-control" placeholder="Email Address" id="email" required
+        data-validation-required-message="Please enter your email address.">
       <p class="help-block text-danger"></p>
     </div>
   </div>
   <div class="control-group">
     <div class="form-group col-xs-12 floating-label-form-group controls">
       <label>Phone Number</label>
-      <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
+      <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required
+        data-validation-required-message="Please enter your phone number.">
       <p class="help-block text-danger"></p>
     </div>
   </div>
   <div class="control-group">
     <div class="form-group floating-label-form-group controls">
       <label>Message</label>
-      <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
+      <textarea rows="5" class="form-control" placeholder="Message" id="message" required
+        data-validation-required-message="Please enter a message."></textarea>
       <p class="help-block text-danger"></p>
     </div>
   </div>
-  <input id="honeypot" type="text" name="honeypot" value="" style="display:none;"/>
+  <input id="honeypot" type="text" name="honeypot" value="" style="display:none;" />
   <br>
   <div id="success"></div>
   <div class="form-group">

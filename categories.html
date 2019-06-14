@@ -7,25 +7,28 @@ permalink: /categories/
 ---
 {% assign sorted_categories = site.categories | sort %}
 <ul class="category-list inline">
-    {% for category in sorted_categories %}
-    <li><a href="#{{ category[0] }}">{{ category[0] | capitalize }} <span>{{ category[1].size }}</span></a></li>
-    {% endfor %}
+  {% for category in sorted_categories %}
+  <li><a href="#{{ category[0] }}">{{ category[0] | capitalize }} <span>{{ category[1].size }}</span></a></li>
+  {% endfor %}
 </ul>
 
 {% for category in sorted_categories %}
 <h4 id="{{ category[0] }}" class="category-name"><span class="fa fa-tag"></span> {{ category[0] | capitalize }}</h2>
-<ul class="category-preview">
+  <ul class="category-preview">
     {% assign pages_list = category[1] %}
-      {% for post in pages_list %}
-        {% if post.title != null %}
-          {% if group == null or group == post.group %}
-          <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}<span class="entry-date"><time
-                  datetime="{{ post.date | date_to_xmlschema }}"
-                  itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></span><br><span class="category-subtitle">{{post.subtitle}}</span></a></li>
-          {% endif %}
+
+    {% for post in pages_list %}
+      {% if post.title != null %}
+        {% if group == null or group == post.group %}
+        <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}<span class="entry-date"><time
+                datetime="{{ post.date | date_to_xmlschema }}"
+                itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></span><br><span
+              class="category-subtitle">{{post.subtitle}}</span></a></li>
         {% endif %}
-      {% endfor %}
+      {% endif %}
+    {% endfor %}
+
     {% assign pages_list = nil %}
-  {% assign group = nil %}
-</ul>
+    {% assign group = nil %}
+  </ul>
 {% endfor %}

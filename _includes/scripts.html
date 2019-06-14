@@ -135,32 +135,32 @@
     });
     $('.side-catalog').toggleClass("fold")
   }));
-  async("{{"/assets/vendor/jquery/jquery.nav.js" | relative_url }}", function () {
-        $('.catalog-body').onePageNav({
-            currentClass: "active",
-            changeHash: !1,
-            easing: "swing",
-            filter: "",
-            scrollSpeed: 700,
-            scrollOffset: 0,
-            scrollThreshold: .2,
-            begin: null,
-            end: null,
-            scrollChange: null,
-            padding: 80
-        });
+  async("{{" / assets / vendor / jquery / jquery.nav.js" | relative_url }}", function () {
+    $('.catalog-body').onePageNav({
+      currentClass: "active",
+      changeHash: !1,
+      easing: "swing",
+      filter: "",
+      scrollSpeed: 700,
+      scrollOffset: 0,
+      scrollThreshold: .2,
+      begin: null,
+      end: null,
+      scrollChange: null,
+      padding: 80
     });
+  });
 
 </script>
 {% else%}
 <script>
   $("img").lazyload();
-  $('a').click(function(){
+  $('a').click(function () {
     $('html, body').animate({
-      scrollTop: $( $.attr(this, 'href') ).offset().top
+      scrollTop: $($.attr(this, 'href')).offset().top
     }, 500);
     return false;
   });
-  
+
 </script>
 {% endif %}
