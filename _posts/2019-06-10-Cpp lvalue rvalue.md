@@ -32,11 +32,32 @@ C에서는 위처럼 정의를 내리고 있다.
 
 > 좌측값은 어떠한 메모리 위치를 가리키는데, & 연산자를 통해 그 위치를 참조할 수 있다. 우측값은 좌측값이 아닌 값들이다.
 
+또한 C++11 부터, rvalue, lavalue 뿐만 아니라 prvalue, xvalue, glvalue라는 개념이 추가되었다.
+
+![cpp values](/img/Cpp/values.png){:width="50%"}{:.center}
+
 ### 2. Rvalue Lvalue
 
- 위에서 말한 내용을 풀어 말하면 & 연산자를 이용해 위치를 참조할 수 있는 부분은 좌측값을 뜻하고, 그 외는 우측값을 뜻한다.
+ 위와 같은 value 들을 이해하기 앞서 우선 참조에 대해서 이해를 하고 넘어가야 한다.
+ 
+ ```cpp
+ int main(){
+     int num = 0;
+     int& refNum = num;// OK!
+     int& refNum2 = 0;// Error!
+     return 0;
+ }
+ ```
+
+ 위와같이 Reference에 0이라는 리터럴 상수를 참조 할 수 없기 때문에 에러가 발생한다.
+ > 비 const 참조에 대한 초기값은 lvalue여야 합니다.
+
+라는 오류를 확인 할 수 있다.
+그 대신 0은 const int 형이기 때문에 const int에대한 참조형인 `const int& refNum2 = 0;`으로 사용 할 수는 있다.
 
 #### 2.1 Example1
+
+Intro에서 말한 내용을 풀어 말하면 & 연산자를 이용해 위치를 참조할 수 있는 부분은 좌측값을 뜻하고, 그 외는 우측값을 뜻한다.
 
 ```cpp
 static int a = 10;
@@ -100,5 +121,6 @@ int &num2 = func(num1);
 ### References
 
 <pre>
+<a href="https://docs.microsoft.com/ko-kr/cpp/cpp/lvalues-and-rvalues-visual-cpp?view=vs-2019">https://docs.microsoft.com/ko-kr/cpp/cpp/lvalues-and-rvalues-visual-cpp?view=vs-2019</a>
 <a href="https://modoocode.com/189">https://modoocode.com/189</a>
 </pre>
