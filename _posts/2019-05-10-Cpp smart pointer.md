@@ -110,6 +110,33 @@ int main() {
 
 그러나 공통적으로 내부 소멸자는 호출되지만 내부 변수가 포인터 등의 경우 자동으로 제거를 보장해주는것이 아니기 때문에 delete 키워드를 통하여 동적할당 한 부분은 제거하도록 명시 해 주어야 한다.
 
+```cpp
+int* do_something2() {
+    std::unique_ptr<int[]> pa = std::make_unique<int[]>(1000);
+    std::cout << "pa[0] : " << pa[0] << std::endl;
+    pa[0] = 10;
+
+    // pb 에 소유권을 이전.
+    std::unique_ptr<int []> pb = std::move(pa);
+    std::cout << "pb[0] : " << pb[0] << std::endl;
+    int *p = pb.get();
+    std::cout << p[0] << std::endl;
+
+    return pb.get();
+}
+
+int main() {
+    int *p = do_something2();
+    std::cout << p[0] << std::endl;
+    _sleep(3000);
+    std::cout << "프로그램 종료";
+}
+```
+
+사실 위의 코드와 같이 unique_ptr의 get을 이용하여 주소값을 넘기는 것은 unuque_ptr의 목적과 다른 잘못 된 코드이다.
+
+하지만 함수가 종료되면 자동적으로 delete되는것을 확인하기 위해 위와 같은 코드를 작성하였다. _sleep(3000)이 불리기 전에 메모리가 해제되어 main에서 p[0]를 출력하면 쓰레기 값이 출력되는것을 볼 수 있다.
+
 #### 1.3 함수에서의 unique_ptr
 
 ```cpp
