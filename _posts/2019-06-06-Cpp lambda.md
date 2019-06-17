@@ -171,7 +171,25 @@ public:
 
 ```cpp
 auto myFunction = []{std::cout << "This is my function"<< std::endl;};
+myFunction();
 ```
+
+위의 코드처럼 myFunction가 함수포인터의 형태로 람다 표현식을 가질 수 있음을 확인가능하다.
+
+#### 3.4 Lambda mutable
+
+```cpp
+int i=10;
+auto myFunc = [=]()mutable ->int {
+    i*=5;
+    return i;
+};
+std::cout << myFunc() << " " << i << std::endl;
+```
+
+i값을 람다 함수 내에서만 변경하고 싶은경우 리턴타입 전에 `mutable`키워드를 사용하면 내부에서만 변경값이 적용된다. 참조가 아닌 값복사를 이용한 변수 변경을 위해서는 `mutable`을 붙여주어야 하는 것이다.
+
+위의 코드를 실행하면 결과값으로 `50 10`이 출력된다.
 
 ### References
 
