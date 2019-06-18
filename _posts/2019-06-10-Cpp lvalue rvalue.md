@@ -36,10 +36,10 @@ C에서는 위처럼 정의를 내리고 있다.
 
 ![cpp values](/img/Cpp/values.png){:width="50%"}{:.center}
 
-### 2. Rvalue Lvalue
+### 2. Values
 
- 위와 같은 value 들을 이해하기 앞서 우선 참조에 대해서 이해를 하고 넘어가야 한다.
- 
+ 위의 다양한 value들을 이해하기 앞서 우선 참조에 대해서 이해를 하고 넘어가야 한다.
+
  ```cpp
  int main(){
      int num = 0;
@@ -54,6 +54,66 @@ C에서는 위처럼 정의를 내리고 있다.
 
 라는 오류를 확인 할 수 있다.
 그 대신 0은 const int 형이기 때문에 const int에대한 참조형인 `const int& refNum2 = 0;`으로 사용 할 수는 있다.
+
+이처럼 C++11에서는 lvalue의 특성을 가지고 있는 것을 "`identity`를 가진다"라고 표현한다.
+이 뜻은 `데이터를 저장할 수 있는 메모리의 위치정보`를 뜻한다.
+C++11 표준에서는 이러한 value들을 다음과 같이 나누었다.
+
+- lvalue : `identity`를 가지면서 `move`될 수 없는 표현식들
+- xvalue : `identity`를 가지면서 `move`될 수 있는 표현식들
+- prvalue : `identity`를 가지고있지 않으면서 `move`될 수 있는 표현식들
+- glvalue : `identity`를 가지고있는 표현식들(lvalue, xvlaue모두 glvalue 표현식)
+- rvalue : `move`될 수 있는 표현식들(prvalue, xvalue 모두 rvalue 표현식)
+- `identity`를 가지고 있지 않으면서 `move`될 수 없는것들
+
+쉽게 이해하자면, 포인터가 있는 값은 주소를 이동할 수 있기 때문에 `move`될 수 있다.
+이처럼 메모리에서 이동 될 수 있는 값을 `rvalue`라고 한다.
+
+#### 2.1 lvalue
+
+```cpp
+static int a = 10;
+int& foo() {
+    a++;
+    return a;
+}
+int foo2(){
+    return a;
+}
+
+//좌측값 (Lvalue)
+int main(){
+    int a = 10,b=10,c=10;
+    int *j = &a; //참조 가능하기 때문에 a는 좌측값(Lvalue)
+    foo() = 43; //foo()는 좌측값(Lvalue)
+    int *ptr1 = &foo(); //&foo()가능하기 때문에 좌측값(Lvalue)
+    ++a;//a는 lvalue, pre-increasement, pre-decreasement
+    int c[4];
+    std::cout << c[1] << std::endl;//c[1]도 lvalue
+    a ? b : c;// a ? b : c의 반환값은 b 또는 c이므로 lvalue
+}
+```
+
+위의 설명처럼 `identity`를 가지면서 `move`될 수 없는 표현식들을 의미한다.
+
+#### 2.2 xvalue
+
+`identity`를 가지면서 `move`될 수 있는 표현식들을 xvalue라고 한다.
+eXpiring에서 따와 xvalue라고 부른다. xvalue는 말 그대로 만료되어가는 값을 뜻한다. 그래서 표현식이 끝나고 표현식이 의미하던 주소로 접근했을 때 값이 존재할 수도 있고, 존재하지 않을 수도 있다.
+예를들어 `std::move(x)`와 같이 rvalue reference를 리턴할 수 있는 함수는 lvalue를 move하고, move한 값은 xvalue에 속하게 된다.
+
+#### 2.3 prvalue
+
+```cpp
+int a = 10;
+int b = 20;
+a++;
+a+b;
+if(a < b){//a<b의 결과값 bool은 prvalue
+
+}
+
+```
 
 #### 2.1 Example1
 
@@ -121,6 +181,8 @@ int &num2 = func(num1);
 ### References
 
 <pre>
+<a href="https://en.cppreference.com/w/cpp/language/value_category">https://en.cppreference.com/w/cpp/language/value_category</a>
 <a href="https://docs.microsoft.com/ko-kr/cpp/cpp/lvalues-and-rvalues-visual-cpp?view=vs-2019">https://docs.microsoft.com/ko-kr/cpp/cpp/lvalues-and-rvalues-visual-cpp?view=vs-2019</a>
+<a href="https://blog.seulgi.kim/2017/06/cpp11-value-category.html">https://blog.seulgi.kim/2017/06/cpp11-value-category.html</a>
 <a href="https://modoocode.com/189">https://modoocode.com/189</a>
 </pre>
