@@ -22,7 +22,7 @@ Smooth scroll
 
 ### 1. scroll-behavior
 
-모든 스크롤을 부드럽게 하고싶을때에는
+간단한 코드로 모든 웹페이지 내의 스크롤을 부드러운 애니메이션 효과를 줄 수 있다.
 
 ```css
 html {
@@ -61,7 +61,7 @@ html {
 
 ### Appendix
 
-그밖에 `WoW.js`, `Headroom.js` 등의 라이브러리를 이용하여 애니메이션 효과를 줄 수 있으며
+그밖에 `WoW.js`, `Headroom.js` 등의 라이브러리를 이용하여 애니메이션 효과를 줄 수 있다.
 
 ### References
 
