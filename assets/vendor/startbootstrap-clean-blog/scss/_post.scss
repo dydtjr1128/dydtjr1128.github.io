@@ -208,44 +208,31 @@ body > div > div > div > p .center {
 
 //==================================================================
 //Side bar css start
-.sidebar-container {
+.catalog-container {
   color: #bfbfbf;
   font-size: 14px;
 }
-.sidebar-container h5 {
+.catalog-container h5 {
   color: #cccccc;
   padding-bottom: 1em;
 }
-.sidebar-container h5 a {
+.catalog-container h5 a {
   color: #cccccc !important;
   text-decoration: none;
 }
-.sidebar-container a {
+.catalog-container a {
   color: #bfbfbf !important;
 }
-.sidebar-container a:hover,
-.sidebar-container a:active {
+.catalog-container a:hover,
+.catalog-container a:active {
   color: #800080 !important;
 }
-.sidebar-container .tags a {
+.catalog-container .tags a {
   border-color: #bfbfbf;
 }
-.sidebar-container .tags a:hover,
-.sidebar-container .tags a:active {
+.catalog-container .tags a:hover,
+.catalog-container .tags a:active {
   border-color: #800080;
-}
-.sidebar-container .short-about img {
-  width: 80%;
-  display: block;
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
-.sidebar-container .short-about p {
-  margin-top: 0px;
-  margin-bottom: 20px;
-}
-.sidebar-container .short-about .list-inline > li {
-  padding-left: 0px;
 }
 
 .catalog-container {
@@ -372,7 +359,8 @@ body > div > div > div > p .center {
   }
 }
 
-#post-container > h3,h4{
+#post-container > h3,
+#post-container > h4{
   border-left: $mycolor 10px solid;
   border-bottom: $mycolor 3px solid;
   color : $mycolor;
