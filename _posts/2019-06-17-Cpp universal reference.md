@@ -21,11 +21,16 @@ Universal reference
 ### 1. Intro
 
 Universal reference는 Effective c++을 쓰신걸로 유명한 Scott meyers라는 분이 붙인 이름이다.
-우선 universal reference는 `&&`처럼 &를 2개붙쳐 표현한다
+우선 universal reference는 `&&`처럼 &를 2개 붙여 표현한다.
 
 ```cpp
 void func(&&People p);
 ```
+
+여기서 universal reference는 2가지 중 하나의 의미를 내포하고 있다.
+
+- rvalue
+- rvalue or lvalue
 
 ### References
 
