@@ -8,7 +8,7 @@ comments: true
 catalog: true
 categories: Chromium
 tags : Chromium
-lastmod :   2019-05-04 19:17:30 +0900
+lastmod :   2019-07-04 21:21:30 +0900
 sitemap:
    changefreq: daily
    priority: 1.0
