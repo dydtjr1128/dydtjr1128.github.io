@@ -8,7 +8,7 @@ comments: true
 catalog: true
 categories: Chromium
 tags : Chromium
-lastmod :   2019-05-04 19:17:30 +0900
+lastmod :   2019-07-04 21:21:30 +0900
 sitemap:
    changefreq: daily
    priority: 1.0
@@ -23,8 +23,7 @@ sitemap:
 크로미움(Chromium) 빌드하기
 </div>
 
-
-## 크로미움(Chromium)이란?
+### Intro. 크로미움(Chromium)이란?
 
 ![Chromium logo](/img/Chromium/Chromium_logo.png){:width="25%"}{:.center}
 
@@ -33,30 +32,18 @@ sitemap:
 크로미움은 크로미움 소스 코드에서 컴파일 된 브라우저를 뜻하고 크롬은 크로미움 소스코드에 어도비 플래시, 자동 업데이트 등 다양한 기능을 추가해 컴파일 한 브라우저이다.  
 그밖에도 크로미움 소스코드는 엣지브라우저, 삼성 인터넷 브라우저, 오페라 브라우저에도 사용이 되었다.
 
-## 크로미움(Chromium) 빌드하기
+### 1. 환경설정
 
-<hr>
+크로미움을 빌드하기에 앞서 다양한 환경설정을 해주어야 정상적인 빌드가 가능하다.
 
-### 목차( Click! )
-<strong>
-<a href="#no0">0. 환경설정</a><br>
-<a href="#no1">1. 코드 다운로드</a><br>
-<a href="#no2">2. 코드 빌드</a><br>
-<a href="#no3">3. Visual studio에서 디버깅 하기</a><br>
-</strong>
-<hr>
-
-<h2 id="no0">0. 환경설정</h2>
-
-#### 필자의 노트북 환경
+#### 1.1 필자의 노트북 환경
 
 - OS : Windows 10 64bit
 - CPU : i7-7200U
 - RAM : 8GB
 - SSD : 256GB
 
-
-#### 권장 환경
+#### 1.2 권장 환경
 
 - 64bit 운영체제
 - 최소 8GB RAM, 16GB 이상의 RAM 권장
@@ -64,7 +51,7 @@ sitemap:
 - 비쥬얼스튜디오 최신버전
 - 윈도우7 이상(10 추천)
 
-#### Visual studio 사전 설정
+#### 1.3 Visual studio 사전 설정
 
 비쥬얼스튜디오는 2017 또는 2019 버전을 사용해야한다.
 
@@ -77,7 +64,7 @@ sitemap:
   
 이 두가지 부분은 설치 해주어야 한다.
 
-#### depot_tools 사전 설정
+#### 1.4 depot_tools 사전 설정
 
 1. depot_tools 다운로드 => **[[다운로드 링크]](https://storage.googleapis.com/chrome-infra/depot_tools.zip "depot_tools 다운로드 링크")**
 2. `C:\src`에 압축해제
@@ -93,8 +80,7 @@ sitemap:
    gclient sync
    ```
 
-
-<h2 id="no1">1. 코드 다운로드</h2>
+### 2. 코드 다운로드
 
 - git 설정
 
@@ -142,7 +128,13 @@ sitemap:
    cd src
    ```
 
-<h2 id="no2">2. 코드 빌드</h2>
+### 3. 소스코드 빌드
+
+아래의 컴파일 과정을 거치면 `C:\Users\유저명\chromium\src\out\Default` 경로에 `all.sln` 파일이 생기는데, 이를 실행하면 된다.
+그러나 매우 많은 프로젝트가 존재하므로 --filter 옵션을 사용해 필요한 부분만 생성하거나 sublimetext 등을 사용해 open 속도를 줄이는것을 추천한다.(build는 Ninja로 하기 때문에)
+빌드는 아래의 3.1(예제코드만), 3.2(크롬빌드)중 하나를 선택해 실행하면 된다.
+
+#### 3.1 예제 코드 빌드
 
 - 소스코드 gen
 
@@ -158,7 +150,7 @@ sitemap:
    blink_symbol_level = 0
    ```
 
-- 컴파일
+- view example 프로젝트만 컴파일
 
    ```cmd
    gn gen --ide=vs --filters=//ui/views/examples:views_examples_exe out\Default
@@ -172,10 +164,58 @@ sitemap:
     .\out\Default\views_examples_exe
    ```
 
-<h2 id="no3">3. Visual studio에서 디버깅 하기</h2>
+#### 3.2 크롬 빌드
 
-상단의 컴파일 과정을 거치면 `C:\Users\유저명\chromium\src\out\Default` 경로에 `all.sln` 파일이 생기는데, 이를 실행하면 된다.
+- 소스코드 gen
 
+   ```cmd
+   gn args out/Default
+   ```
+
+- gn args 설정. 위의 명령어 실행 후 뜨는 메모장에 다음과 같이 기입
+
+   ```text
+   is_debug = true
+   is_component_build = true
+   blink_symbol_level = 0
+   ```
+
+- 크롬 빌드
+
+   ```cmd
+   autoninja -C out\Default chrome
+   ```
+
+- 예제파일 실행
+
+   ```cmd
+    .\out\Default\Chrome.exe
+   ```
+
+### 4. Ninja(Chromium build tool)
+
+닌자(Ninja)는 속도에 중점을 둔 소형 빌드 시스템으로 상위 레벨 빌드 시스템에서 입력 파일을 생성하도록 설계되었고 최대한 빨리 빌드를 실행하기위해 cpu 병렬처리를 한다.
+`ninja -j N`
+autoninja는 크로미움에서 ninja에 최적화된값을 자동으로 설정하는 툴이다.
+
+#### 4.1 Jumbo_build (Ninja option)
+
+`Jumbo_build = false`
+
+3번에서 gn args 부분에서 위의 옵션을 주지 않는다면 기본적으로 `true` 인 상태로 gen 되게 된다.
+점보빌드는 cc파일을 하나로 합쳐서 빌드함으로써 속도를 높이는데 `true`상태로 빌드 시에는 오류가 안 생기는데 `false`로 돌려서 오류가 생길수 있다.
+왜냐하면 점보빌드는 cc파일 합칠때 include header파일이 2군데 필요할 때 한군데에만 선언되어 있어도 파일이 합쳐지기 때문에 제대로 동작한다.
+그러나 일반적으로 빌드하는 상황에서는 두군데에서 필요하지만 한군데에만 선언되어서 오류가 발생 할 수 있다.
+
+### 5. Visual studio에서 디버깅 하기
+
+```cmd
+devenv /debugexe .\out\Default\Chromium.exe
+```
+
+그 후 파일-열기-파일 에서 원하는 소스파일 열고 중단점 걸고 위의 시작 을 눌러 프로세스 실행하면 된다.
+
+이렇게 디버깅 하는것의 장점으로는 실행 후 디버그를 거는것이 아닌 실행과정에서의 디버깅 또한 가능하다는 장점이 있다.
 
 ## toolbar 수정 결과
 
