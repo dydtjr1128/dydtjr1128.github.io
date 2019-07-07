@@ -49,7 +49,7 @@ Image compression
 
 #### 1.2 Indexed color vs Direct color
 
-![Indexed color](/img/Etc/image_compression/indexed_color.png){:width="60%"}{:.center}
+![Indexed color](/img/Etc/image_compression/indexed_color.png){:width="30%"}{:.center}
 
 Indexed Color는 제작자에 의해 Color Map이라는 곳에 제한된 수의 색상(즉 256가지의 색상)을 가진 palette로만 저장할 수 있는 속성이다.
 
@@ -91,7 +91,7 @@ png-32 = 2의 24승 대략 1670만 컬러 (트루컬러) + alpha(8bit)가 할당
 
 ### SVG(Scalable Vector Graphics) -  Lossless / Vector
 
-![Chromium infrastructure](/img/Etc/image_compression/svg_png.png){:width="70%"}{:.center}
+![SVG image](/img/Etc/image_compression/svg_png.png){:width="50%"}{:.center}
 
 2차원 벡터 그래픽을 표현하기 위한 XML 기반의 파일 형식으로, 1999년 W3C(World Wide Web Consortium)의 주도하에 개발된 오픈 표준의 벡터 그래픽 파일 형식이다. SVG 형식의 이미지와 그 작동은 XML 텍스트 파일들로 정의 되어 검색화·목록화·스크립트화가 가능하며 필요하다면 압축도 가능하다.
 
