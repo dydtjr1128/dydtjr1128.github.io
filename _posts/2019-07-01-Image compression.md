@@ -55,8 +55,6 @@ Indexed Color는 제작자에 의해 Color Map이라는 곳에 제한된 수의 
 
 그에 비해 Direct Color는 제작자가 직접 선택하지 않은 수천가지의 컬러를 저장할 수 있는 속성이기 때문에 다양한 색을 표현할 수 있는 반면 그 다양한 색상의 정보를 저장해야 하기 때문에 Indexed Color에 비해 많은 용량이 필요 하다.
 
-이미지에서의 압축방식은 어떨까?
-
 ### 2. BMP(BitMaP) - Lossless / Indexed and Direct
 
 BMP 파일 포맷은 비트맵 디지털 그림을 저장하는 데 쓰이는 그림 파일 포맷이다
@@ -68,7 +66,7 @@ BMP는 Indexed color, Direct color 속성을 가지고 있다.
 
 기본적으로 1~24비트의 색을 표현할 수 있다. 1비트는 2가지 색이며 24비트는 16777216가지 색이다. 알파 채널을 포함한 32비트 포맷이 윈도 XP에서 발표되었다. 일반적으로 데이터를 압축하지 않고 사용되지만, RLE 압축 방식도 지원한다.
 
-### 3. JPG, JPEG(Joint Photographic Experts Group)
+### 3. JPG, JPEG(Joint Photographic Experts Group) - Lossy / Direct
 
 사실 jpg와 jpeg는 같은 의미이다.  
 jpg는 3글자, jpeg는 4글자인데 도스(DOS)에서는 확장자를 4자리 이상 지정할 수 없었기 때문에 jpeg라는 글자를 jpg로 줄여 사용하게 되었다.
@@ -76,7 +74,7 @@ jpg는 3글자, jpeg는 4글자인데 도스(DOS)에서는 확장자를 4자리 
 jpg는 데이터가 손실되지만 용량이 작아 웹에서 널리 쓰인다.
 하지만 JPG는 RGB색상 공간을 사용하기때문에 투명도(Apaque)를 사용할 수 없다.
 
-### 4. PNG(Portable Network Graphics)
+### 4. PNG(Portable Network Graphics) - Lossless / Indexed(PNG8), Lossless / Direct(PNG-24)
 
 손실 압축의 대표적인 포맷이 jpg라면 비손실 압축 방법의 대표적인 예는 png 가있다.  
 무손실 압축으로 이미지 디테일 손실이 전혀없고 고품질 이미지를 생성하지만 파일 크기는 상대적으로 다른 포맷보다 커진다.
@@ -91,7 +89,9 @@ png-32 = 2의 24승 대략 1670만 컬러 (트루컬러) + alpha(8bit)가 할당
 
 > 이러한 비손실의 특성 때문에 PNG 파일은 배경이 투명해 없을 수 있지만 JPG는 배경이 투명 할 수 없다.
 
-### SVG(Scalable Vector Graphics)
+### SVG(Scalable Vector Graphics) -  Lossless / Vector
+
+![Chromium infrastructure](/img/Etc/image_compression/svg_png.png){:width="70%"}{:.center}
 
 2차원 벡터 그래픽을 표현하기 위한 XML 기반의 파일 형식으로, 1999년 W3C(World Wide Web Consortium)의 주도하에 개발된 오픈 표준의 벡터 그래픽 파일 형식이다. SVG 형식의 이미지와 그 작동은 XML 텍스트 파일들로 정의 되어 검색화·목록화·스크립트화가 가능하며 필요하다면 압축도 가능하다.
 
@@ -99,18 +99,21 @@ SVG 형식의 파일은 어도비 일러스트레이터와 같은 벡터 드로�
 
 현재 마이크로소프트의 인터넷 익스플로러 8 및 이전 버전을 제외한 대부분의 주요 웹 브라우저들은 SVG를 지원한다. 인터넷 익스플로러 8 및 이전 버전에서는 SVG 파일을 보기 위해 별도의 플러그인을 수동으로 설치하여야 하며, 그렇지 않은 경우에는 웹 페이지 제작자가 구글 코드에서 개발중인 자바스크립트 라이브러리, SVG Web 을 웹 페이지 코드에 포함시켜야 한다.
 
-이러한 SVG는 벡터의 특성을 가지고 있어 위의 PNG, JPG와 달리 확대를 해도 이미지가 깨지지 않는다. 즉, 모든 스크린 화면에서 선명한 이미지를 보여 줄 수 있다.
+Vector 파일 포맷은 실제로 픽셀 대신에 라인과 곡선들로 이루어져 있기 때문에 이미지를 확대, 축소 하더라도 깨짐 현상이 없다. 그렇기 때문에 모든 스크린 화면에서 선명한 이미지를 보여 줄 필요가 있는 로고 등에 적절한 포맷이다.
 
+이러한 SVG는 사이즈도 작은 편에 속하는데, 모양이 복잡할 수록 벡터 계산이 많이 필요해 계산이 많이 필요 해 질 수 있다.
 
+### Summary
 
+![Image difference](/img/Etc/image_compression/logo.jpeg){:width="70%"}{:.center}
 
-### Appendix
-
-그밖에 `WoW.js`, `Headroom.js` 등의 라이브러리를 이용하여 애니메이션 효과를 줄 수 있다.
+![Image difference](/img/Etc/image_compression/image_difference.png){:width="70%"}{:.center}
 
 ### References
 
 <pre>
-<a href="https://www.w3schools.com/cssref/pr_scroll-behavior.asp">https://www.w3schools.com/cssref/pr_scroll-behavior.asp</a>
-<a href="https://api.jquery.com/animate/">https://api.jquery.com/animate/</a>
+<a href="https://ko.wikipedia.org/wiki/%EC%86%90%EC%8B%A4_%EC%95%95%EC%B6%95">https://ko.wikipedia.org/wiki/%EC%86%90%EC%8B%A4_%EC%95%95%EC%B6%95</a>
+<a href="https://ko.wikipedia.org/wiki/BMP_%ED%8C%8C%EC%9D%BC_%ED%8F%AC%EB%A7%B7">https://ko.wikipedia.org/wiki/BMP_%ED%8C%8C%EC%9D%BC_%ED%8F%AC%EB%A7%B7</a>
+<a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics#Pixel_format">https://en.wikipedia.org/wiki/Portable_Network_Graphics#Pixel_format</a>
+<a href="https://medium.com/@soeunlee/web%EC%97%90%EC%84%9C-png-gif-jpeg-svg-%EC%A4%91-%EC%96%B4%EB%96%A4-%EA%B2%83%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%A9%B4-%EC%A2%8B%EC%9D%84%EA%B9%8C%EC%9A%94-6937300e776e">https://medium.com/@soeunlee/web%EC%97%90%EC%84%9C-png-gif-jpeg-svg-%EC%A4%91-%EC%96%B4%EB%96%A4-%EA%B2%83%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%A9%B4-%EC%A2%8B%EC%9D%84%EA%B9%8C%EC%9A%94-6937300e776e</a>
 </pre>
