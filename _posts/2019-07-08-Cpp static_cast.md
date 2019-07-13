@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "static_cast란?"
+title:  "C++ static_cast란?"
 subtitle: "What is static_cast"
 date: 2019-07-08 20:23:30 +0900
 background: '/img/posts/07.jpg'
