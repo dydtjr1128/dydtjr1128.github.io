@@ -25,7 +25,9 @@ static_cast
 - static_cast<new_type>(expression)  
 - static_cast<바꾸려는타입>(대상)
 
-### static_cast는 컴파일 타임에 형 변환을 해 주기 때문에 컴파일 시 타입에 대한 오류를 잡아 준다는 장점이 있다.
+### static_cast의 장점
+
+static_cast는 컴파일 타임에 형 변환을 해 주기 때문에 컴파일 시 타입에 대한 오류를 잡아 준다는 장점이 있다.
 
 ```cpp
 double d = 12.34;
@@ -36,7 +38,7 @@ int *ptr;
 ptr = static_cast<int *>(arr);
 ```
 
-### static_cast의 사용 이유?
+### static_cast의 사용 이유
 
 ```cpp
 double a = 12.34;
