@@ -74,9 +74,3 @@ int main(){
    printA(A(n)); //OK
 }
 ```
-
-### References
-
-<pre>
-<a href="https://blockdmask.tistory.com/236">https://blockdmask.tistory.com/236</a>
-</pre>
