@@ -3,7 +3,7 @@ layout: post
 title:  "크로미움 컨트리뷰션 프로세스"
 subtitle: "Chromium contribution process"
 date: 2019-07-13 14:49:30 +0900
-background: '/img/Windows/new_terminal.png'
+background: '/img/posts/07.jpg'
 comments: true
 catalog: true
 categories: Chromium
