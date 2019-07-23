@@ -6,19 +6,15 @@ date: 2019-07-18 20:18:30 +0900
 background: '/img/posts/07.jpg'
 comments: true
 catalog: true
-categories: CPP
-tags : CPP
+categories: EffectiveC++
+tags : EffectiveC++
 lastmod : 2019-07-13 14:15:30 +0900
 sitemap:
    changefreq: daily
    priority: 1.0
 ---
 
-<div class="contentTitle">
-Virtual Destructor
-</div>
-
-### Intro
+### Use virtual destructor when existing inherit class
 
 상속받는 클래스가 존재하는 경우 가상 소멸자를 사용하는것이 중요하다. 잘못하다간 메모리가 해제되지 않는 현상이 발생한다. 다음의 코드를 보고 문제점에 주의를 기울여야한다.
 
