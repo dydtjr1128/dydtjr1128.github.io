@@ -14,7 +14,7 @@ sitemap:
    priority: 1.0
 ---
 
-### Do not take away the treatment of self-admission in Operator=
+### Do not take away the processing of self-admission in Operator=
 
 ```cpp
 class Bitmap {
