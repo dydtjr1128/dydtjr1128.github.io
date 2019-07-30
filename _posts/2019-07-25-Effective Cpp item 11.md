@@ -16,6 +16,11 @@ sitemap:
 
 ### Do not take away the processing of self-admission in Operator=
 
+`operator=`라는 대입 연산자를 구현할 때, 객체가 자신에게 대입되는 경우에 대한 처리를 하도록 해야한다.  
+이러한 처리를 위해서 자기 자신과의 주소를 비교하거나 복사 후 바꾸는 방법을 사용하면 된다.
+
+즉, 어떤 객체가 자기 자신에 대해 대입연산사를 사용하는 `자기대입`을 조심해야 한다.
+
 ```cpp
 class Bitmap {
 public:
