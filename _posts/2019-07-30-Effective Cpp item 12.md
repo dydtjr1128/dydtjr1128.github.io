@@ -24,12 +24,14 @@ class Customer {
 public:
    Customer();
    Customer(std::string name):name(name){}
-   Customer(const Customer& rhs): 
+   Customer(const Customer& rhs):
       name(rhs.name) {
       std::cout << "Copy constructor"<< std::endl;
    }
    Customer& operator=(const Customer& rhs) {
       std::cout << "Copy operator" << std::endl;
+      name = rhs.name;
+      return *this;
    }
 private:
    std::string name;
@@ -43,7 +45,10 @@ public:
       std::cout << "Copy PriorityCustomer constructor" << std::endl;
    }
    PriorityCustomer& operator=(const PriorityCustomer& rhs) {
+      Customer::operator(rhs);
+      priority = rhs.priority;
       std::cout << "Copy PriorityCustomer operator" << std::endl;
+      return *this;
    }
 private:
    int age;
@@ -64,7 +69,10 @@ public:
       std::cout << "Copy PriorityCustomer constructor" << std::endl;
    }
    PriorityCustomer& operator=(const PriorityCustomer& rhs) {
+      Customer::operator(rhs);
+      priority = rhs.priority;
       std::cout << "Copy PriorityCustomer operator" << std::endl;
+      return *this;
    }
 private:
    int age;
