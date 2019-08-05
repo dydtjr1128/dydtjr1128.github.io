@@ -2,13 +2,13 @@
 layout: post
 title:  "C++ 자원 관리 클래스에서 관리되는 자원은 외부에서 접근 할 수 있도록 하자."
 subtitle: "Managed resource by the resource management class be accessible from the outside."
-date: 2019-07-30 19:53:30 +0900
+date: 2019-08-01 20:11:30 +0900
 background: '/img/posts/07.jpg'
 comments: true
 catalog: true
 categories: EffectiveC++
 tags : EffectiveC++
-lastmod : 2019-07-30 19:53:30 +0900
+lastmod : 2019-08-01 20:11:30 +0900
 sitemap:
    changefreq: daily
    priority: 1.0
@@ -59,4 +59,3 @@ int main() {
 ```
 
 위의 코드처럼 실제 포인터에 대한 `암시적 형 변환` 또한 가능하다.
-
