@@ -51,22 +51,34 @@ class Widget
 public:
   Widget(int i, bool b);
   Widget(int i, double d);
-
+  Widget(std::string a);
   //bool을 원소로 하는 initializer_list 인자로 받음
-  Widget(std::initializer_list<bool> b) {
-    std::cout << "initializer_list" << std::endl;
-  }
+  Widget(std::initializer_list<bool> il);
 };
+Widget::Widget(int i, bool b) {
+  std::cout << "int+bool" << std::endl;
+}
+Widget::Widget(int i, double d) {
+  std::cout << "int+double" << std::endl;
+}
+Widget::Widget(std::string a) {
+  std::cout << "string" << std::endl;
+}
+Widget::Widget(std::initializer_list<bool> il) {
+  std::cout << "initializer_list" << std::endl;
+}
 int main() {
   //Widget w{ 10, 5.0 }; //error
   Widget w{ true }; //ok
+  std::string b= "dsk";
+  Widget w3{ b }; //ok. call string constructor
   return 0;
 }
 ```
 
 `uniform initialization`은 생성자들 중에 `std::initializer_list`의 형태의 인자를 가진 생성자가 존재한다면 적절한 생성자가 있음에도 불구하고 모두 무시하려고 한다.  
 그렇기 때문에 w에 `{}`을 이용하여 10, 5.0을 대입 하더라도 이에 맞는 `std::initializer_list`를 인자로 가진 생성자가 존재 하지 않기 때문에 오류를 발생시킨다.
-그러나 bool형과 관련이 없는 
+그러나 bool형과 관련이 없는 string 등을 대입하는 경우에는 당연히 문제를 발생 시키지 않는다.
 
 ```cpp
 class Widget
