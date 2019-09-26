@@ -2,13 +2,13 @@
 layout: post
 title:  "Polling & Long Polling & Streaming"
 subtitle: "Polling & Long Polling & Streaming"
-date: 2019-09-11 17:42:30 +0900
+date: 2019-09-23 11:55:30 +0900
 background: '/img/posts/07.jpg'
 comments: true
 catalog: true
 categories: ETC
 tags : ETC
-lastmod : 2019-09-11 17:42:30 +0900
+lastmod : 2019-09-23 11:55:30 +0900
 sitemap:
    changefreq: daily
    priority: 1.0
