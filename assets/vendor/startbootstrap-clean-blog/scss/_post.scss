@@ -292,10 +292,13 @@ body > div > div > div > p .center {
   font-size: 13px;
   font-weight: bold;
 }
-.side-catalog .catalog-body .h4_nav,
+.side-catalog .catalog-body .h4_nav {
+  margin-left: 12px;
+  font-size: 12px;
+}
 .side-catalog .catalog-body .h5_nav,
 .side-catalog .catalog-body .h6_nav {
-  margin-left: 10px;
+  margin-left: 26px;
   font-size: 12px;
 }
 .side-catalog .catalog-body .h4_nav a,
