@@ -5,14 +5,18 @@
     {% endif %}
     <span style="font-size:22px; font-weight:bold;"><a style="text-decoration: none;"
             href="{{ site.baseurl }}/categories/">FEATURED CATEGORIES</a></span>
-    <div class="tags">
+    
+    <ul class="category-list inline">
         {% for category in site.categories %}{% if category[1].size > site.featured-condition-size %}
-        <a data-sort="{{ site.posts.size | minus: category[1].size | prepend: '0000' | slice: -4, 4 }}"
-            href="{{ site.baseurl }}/categories/#{{ category[0] | url_encode }}" title="{{ category[0] }}"
-            rel="{{ category[1].size }}">{{ category[0] }}</a>
+        <li>
+            <a data-sort="{{ site.posts.size | minus: category[1].size | prepend: '0000' | slice: -4, 4 }}"
+                href="{{ site.baseurl }}/categories/#{{ category[0] | url_encode }}" title="{{ category[0] }}"
+                rel="{{ category[1].size }}">{{ category[0] }}</a>
+        </li>
         {% endif %}{% endfor %}
         {{ category | split:'</a>' | sort | join:'</a>' }}
-    </div>
+    </ul>
+    
 </section>
 {% endif %}
 <script>
