@@ -3,8 +3,9 @@
  */
 @font-face {
   font-family: 'D2 coding';
-  font-style: normal;
+  font-style: normal;  
   font-weight: 400;
+  font-display: swap;
   src: url('D2Coding.eot');
   src: local('※'), local('D2Coding'),
        url('D2Coding.eot?#iefix') format('embedded-opentype'),
@@ -17,6 +18,7 @@
   font-family: 'D2 coding';
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: url('D2CodingBold.eot');
   src: local('※'), local('D2Coding Bold'),
        url('D2CodingBold.eot?#iefix') format('embedded-opentype'),
