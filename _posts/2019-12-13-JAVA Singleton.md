@@ -121,7 +121,7 @@ LazySingleton Constructor
 EagerSingleton Constructor
 ```
 
-위와 같은 결과를 보여준다. 하지만 getInstance 2줄을 주석하고 주석되어 있는 print 2줄만 선언 해 보면
+위와 같은 결과를 보여준다. 하지만 `getInstance()`를 사용한 2 라인을 주석하고 주석되어 있는 `print()`가 호출되는 2줄만 존재하는 상태로 실행 해 보면 다음과 같은 결과를 보여준다.
 
 ```result
 LazySingleton.print()
@@ -129,7 +129,7 @@ EagerSingleton Constructor
 EagerSingleton.print()
 ```
 
-위와 같은 결과를 보여준다. `EagerSingleton.print()`만을 호출했음에도 클래스가 로드되면서 객체까지 생성되어 생성자가 호출되는것을 확인 할 수 있다.
+`EagerSingleton.print()`만을 호출했음에도 클래스가 로드되면서 객체까지 생성되어 생성자가 호출되는것을 확인 할 수 있다.
 
 ### Summary
 
