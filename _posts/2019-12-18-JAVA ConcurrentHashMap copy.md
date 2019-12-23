@@ -29,7 +29,9 @@ ConcurrentHashMap(int initialCapacity, float loadFactor)
 ConcurrentHashMap(int initialCapacity, float loadFactor, int concurrencyLevel)
 ConcurrentHashMap(Map<? extends K,? extends V> m)
 ```
-`ConcurrentHashMap`의 생성자는 위와 같으며 4번째 생성자의 concurrencyLevel을 이용하여 세그먼트 갯수를 정할 수있다.
+
+`ConcurrentHashMap`의 생성자는 위와 같으며 4번째 생성자의 concurrencyLevel을 이용하여 세그먼트 갯수를 정할 수 있다.
+여기서 세그먼트 갯수는 분리된 세그먼트당 락을 갖도록 하기 때문데 멀티 쓰레드에서 전체적링 락킹 방법보다 훨씬 효율적이고 뛰어난 성능을 보여준다.
 
 기본값으로는 initialCapacity 는 16, loadFactor는 0.75, concurrencyLevel은 16으로 정해져 있다. 
 
