@@ -42,11 +42,11 @@ public:
    int GetNum() { return num; }
    bool IsNotZero() const {
       int r = GetNum();// error! non-const function;
-      SetZero()// ok! const function.
+      SetZero()// call ok! const function. but can't change value
       return num != 0;
    }
    void SetZero() const {
-      num = 0;
+      num = 0; // error! can not change class value
    }
 private:
    int num;
