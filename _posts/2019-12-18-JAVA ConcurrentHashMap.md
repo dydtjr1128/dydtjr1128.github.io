@@ -20,7 +20,7 @@ sitemap:
 기존의 멀티쓰레드 환경에서 동기화를 위한 Hashmap은 `Collections.synchronizedMap(new HashMap<>())`을 이용하여 사용하였다.
 그러나 단순히 hashmap 내부의 함수를 synchronized 키워드로 감싼 탓에 성능이 현저하게 떨어지는 문제점이 발생하였다. 그래서 java 1.5부터 추가된 `ConcurrentHashMap`은 이러한 문제점을 해결하여 구현되어있다.
 
-ConcurrentHashmap은 훨씬 세밀한 locking 방법을 적용시켜 오버헤드를 줄였다. 하나의 공유자원을 여러개의 세그먼트로 나누고 각 세그먼트별로 다른 락을 거는 기법을`lock striping`이라고 부르는데, 이 기법을 적용시킨 `ConcurrentHashMap`은 기본적으로 16개의 세그먼트로 나뉘어져 있고, 각 세그먼트별로 다른 lock으로 동기화 되도록 만들었다. 
+ConcurrentHashmap은 훨씬 세밀한 locking 방법을 적용시켜 오버헤드를 줄였다. 하나의 공유자원을 여러개의 세그먼트로 나누고 각 세그먼트별로 다른 락을 거는 기법을`lock striping`이라고 부르는데, 이 기법을 적용시킨 `ConcurrentHashMap`은 기본적으로 16개의 세그먼트로 나뉘어져 있고, 각 세그먼트별로 다른 lock으로 동기화 되도록 만들었다.
 
 ```java
 ConcurrentHashMap()
@@ -66,21 +66,26 @@ public class Test {
         int availableProcessors = Runtime.getRuntime().availableProcessors();
         ExecutorService service = Executors.newFixedThreadPool(availableProcessors);
         Future<?>[] future = new Future[availableProcessors];
+        //쓰레드 풀 개수(프로세서 수) 만큼 반복, 모든 쓰레드에 작업 할당
         for (int i = 0; i < availableProcessors; i++) {
+            //쓰레드 풀을 이용해 멀티 쓰레드로 Map의 get 메소드 호출
             future[i] = service.submit(() -> {
                 for (int j = 0; j < MAP_SIZE; j++) {
                     long st = System.currentTimeMillis();
                     for (int k = 0; k < arrayList.size(); k++) {
                         maps[j].get(arrayList.get(k));
                     }
+                    //쓰레드 별 걸린 작업시간 측정 및 추가
                     atomicIntegers[j].addAndGet((int) (System.currentTimeMillis() - st));
                 }
             });
         }
+        //결과값 대기
         for (int i = 0; i < availableProcessors; i++) {
             future[i].get();
         }
         for (int i = 0; i < MAP_SIZE; i++) {
+            //Map 종류별로 걸린 평균시간 출력
             System.out.println(maps[i].getClass().toString() + " " + atomicIntegers[i].get() / availableProcessors);
         }
 
