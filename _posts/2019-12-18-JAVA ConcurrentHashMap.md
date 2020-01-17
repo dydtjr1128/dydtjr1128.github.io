@@ -100,5 +100,5 @@ class java.util.Collections$SynchronizedMap 1465
 class java.util.concurrent.ConcurrentHashMap 157
 ```
 
-1,000,000개의 랜덤한 데이터를 두 객체에 넣고, 모든 Key를 이용해 값을 가져오는 코드이다. 결과를 보면 `SynchronizedMap`이 `ConcurrentHashMap`에 비해 굉장히 느리다는 것을 알 수 있다.
+1,000,000개의 랜덤한 데이터를 두 객체에 넣고, 모든 Key를 이용해 값을 가져오는 코드이다. 멀티 쓰레드 환경에서 동기화를 보장하면서 결과를 가져오기 때문에 동기화 성능이 중요하다. 결과를 보면 `SynchronizedMap`이 `ConcurrentHashMap`에 비해 굉장히 느리다는 것을 알 수 있다.
 `ConcurrentHashMap`이 어떠한 상황에서도  `SynchronizedMap`보다 좋은 성능을 보여 주기 때문에 멀티 쓰레드 환경을 고려한다면 `ConcurrentHashMap`을 사용하는것이 좋다.

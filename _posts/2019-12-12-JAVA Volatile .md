@@ -67,4 +67,3 @@ public final long getAndAddLong(Object o, long offset, long delta) {
 
 그리고 이 값을 while-loop를 돌면서 예상 값과 같아질 때 까지 반복하는 구조를 가지고 있다. 이러한 구조를 CAS 구조라고 하는데 그렇기 때문에 `synchronized` 키워드 없이 멀티쓰레드에서 값을 보장한다.
 또한 volatile 키워드를 통해 메모리에만 읽고 쓰기를 함으로써 변수에 가시성을 보장하게 된다.
- 
