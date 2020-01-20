@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  "소프트웨어(exe) 파일 디지털 서명, 전자 서명 이해하기"
+title:  "(WIP)소프트웨어(exe) 파일 디지털 서명, 전자 서명 이해하기"
 subtitle: "Understanding executable software code sign."
-date: 2020-01-09 10:08:10 +0900
+date: 2020-05-09 10:08:10 +0900
 background: '/img/posts/07.jpg'
 comments: true
 catalog: true
 categories: CPP
 tags : CPP
-lastmod :  2020-01-09 10:08:10 +0900
+lastmod :  2020-05-09 10:08:10 +0900
 sitemap:
    changefreq: daily
    priority: 1.0
