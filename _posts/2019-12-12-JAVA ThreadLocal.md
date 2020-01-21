@@ -51,7 +51,7 @@ class StoreData {
 class Parent extends Thread {
     private int id;
 
-    Parent(int id) { 
+    Parent(int id) {
         this.id = id;
     }
 
