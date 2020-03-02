@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "C++ 코드를 추가해서 디버깅하기(중단점)"
-subtitle: "Understanding C++ const keyword"
+title:  "C++ 코드를 추가해서 런타임에 중단점 걸어 디버깅하기"
+subtitle: "C++ Add debuging code & Run just in time debugger."
 date: 2020-03-02 14:07:10 +0900
 background: '/img/posts/07.jpg'
 comments: true
