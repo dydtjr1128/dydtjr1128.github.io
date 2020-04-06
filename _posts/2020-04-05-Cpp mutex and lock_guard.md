@@ -37,16 +37,16 @@ C++14에서 추가된 `std::shared_timed_mutex`는 베타적 잠금 외에 한�
 
 C++17에서 추가된 `std::shared_mutex`는 C++14의 `std::shared_timed_mutex`과 동일한 역할을 하지만 시간과 관련된 메소드가 빠진 클래스라고 볼 수 있습니다. 하지만 내부적으로 `condition_variable`로 구현된 `std::shared_timed_mutex`에 비해 `Slim Reader Writer Lock (SRW Lock)`로 구현된 `std::shared_mutex`가 훨씬 빠르고 높은 성능을 보여줍니다. => [SRW Lock 에 대한 글](https://docs.microsoft.com/en-us/windows/win32/sync/slim-reader-writer--srw--locks)
 
-### Appearence
+#### Appearence
 
-#### Constructor
+##### Constructor
 
 ```cpp
 constexpr mutex() noexcept;     (since C++11)
 mutex( const mutex& ) = delete; (since C++11)
 ```
 
-#### Destructor
+##### Destructor
 
 ```cpp
 ~mutex()
