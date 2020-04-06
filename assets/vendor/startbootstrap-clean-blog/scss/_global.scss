@@ -3,10 +3,11 @@ body {
   font-size: 20px;
   color: $gray-900;
   //@include serif-font;
-  font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", 'NanumBarunGothic', 'D2 coding', sans-serif;
+  font-family: 'Noto Sans KR';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+//, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", 'NanumBarunGothic', 'D2 coding', sans-serif;
 
 p {
   line-height: 1.5;
@@ -23,7 +24,7 @@ h4,
 h5,
 h6 {
   font-weight: 800;
-  font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", 'NanumBarunGothic', 'D2 coding', sans-serif;
+  font-family: 'Noto Sans KR';
   //@include sans-serif-font;
 }
 
