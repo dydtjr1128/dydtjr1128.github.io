@@ -1,11 +1,10 @@
 // Global styling for this template
 body {
-  font-size: 20px;
+  font-size: 18px;
   color: $gray-900;
-  //@include serif-font;
   font-family: 'Noto Sans KR', 'NotoSans', 'Apple SD Gothic Neo', sans-serif;
-  font-weight: normal;
-  line-height: normal;
+  font-weight: 300;
+  line-height: 24px !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -27,7 +26,6 @@ h5,
 h6 {
   font-weight: normal;
   font-family: 'Noto Sans KR', 'NotoSans', 'Apple SD Gothic Neo', sans-serif;
-  //@include sans-serif-font;
 }
 
 a {
