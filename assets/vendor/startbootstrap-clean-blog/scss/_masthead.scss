@@ -32,12 +32,9 @@ header.masthead {
       font-size: 50px;
       margin-top: 0;
     }
-    h2 {
-      font-size: 36px;
-    }
     .subheading {
       font-size: 24px;
-      //font-weight: 300;
+      font-weight: 300;
       line-height: 1.1;
       display: block;
       margin: 10px 0 0;
@@ -50,7 +47,7 @@ header.masthead {
     }
   }
   .post-heading {
-    h1 {
+    h2 {
       font-size: 35px;
     }
     .meta,
@@ -60,7 +57,7 @@ header.masthead {
     }
     .subheading {
       font-size: 24px;
-      font-weight: 600;
+      //font-weight: 600;
       margin: 10px 0 30px;
       @include sans-serif-font;
     }
@@ -78,7 +75,7 @@ header.masthead {
         font-size: 55px;
       }
       .subheading {
-        font-size: 30px;
+        font-size: 24px;
       }
     }
   }
