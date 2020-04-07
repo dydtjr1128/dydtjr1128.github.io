@@ -5,6 +5,11 @@ description: This are posts's categories.
 background: '/img/bg-about.jpg'
 permalink: /categories/
 ---
+<style>
+  a {
+    color:black !important;
+  }
+</style>
 {% assign sorted_categories = site.categories | sort %}
 <ul class="category-list inline">
   {% for category in sorted_categories %}
