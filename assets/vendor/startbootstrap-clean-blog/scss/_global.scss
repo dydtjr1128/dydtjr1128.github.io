@@ -10,6 +10,10 @@ body {
 }
 //, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", 'NanumBarunGothic', 'D2 coding', sans-serif;
 
+p {
+  margin-bottom: 25px !important;
+}
+
 h1,
 h2,
 h3,
@@ -20,14 +24,6 @@ h6 {
   font-family: 'Noto Sans KR', 'NotoSans', 'Apple SD Gothic Neo', sans-serif;
 }
 
-a {
-  color: $gray-900;
-  @include transition-all;
-  &:focus,
-  &:hover {
-    color: $primary;
-  }
-}
 blockquote {
   font-style: italic;
   color: $gray-600;
