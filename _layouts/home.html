@@ -30,17 +30,19 @@ layout: default
             {% endif %}
           </div>
         </a>
-        <div class="post-meta">Posted by
-          {% if post.author %}
-          {{ post.author }}
-          {% else %}
-          {{ site.author }}
-          {% endif %}
-          on
-          {{ post.date | date: '%F' }} &middot; {% include read_time.html content=post.content %}
-        </div>
-        <div class="post-category">
-          <a href="{{ site.url }}/categories#{{post.categories}}">{{ post.categories}}</a>
+        <div class="post-preview-footer">
+          <span class="post-meta">Posted by
+            {% if post.author %}
+            {{ post.author }}
+            {% else %}
+            {{ site.author }}
+            {% endif %}
+            on
+            {{ post.date | date: '%F' }} &middot; {% include read_time.html content=post.content %}
+          </span>			
+          <span class="post-category">
+            <a href="{{ site.url }}/categories#{{post.categories}}">{{ post.categories}}</a>                    
+          </span>
         </div>
       </article>
 
@@ -51,7 +53,7 @@ layout: default
         <a class="btn btn-primary float-right" href="{{"/posts" | relative_url }}">View All Posts &rarr;</a>
       </div>
 
-    </div>
+    </span>
   </div>
 </div>
 <script src="/assets/vendor/jquery/jquery.min.js"></script>

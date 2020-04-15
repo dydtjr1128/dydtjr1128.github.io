@@ -1,8 +1,8 @@
 // Styling for the post page
 .post-preview {
   visibility: hidden;
-  padding-bottom: 1.7rem;
-  margin-bottom : 1.7rem;
+  padding-bottom: 1.8rem;
+  margin-bottom : 1.8rem;
   border-bottom:1px solid rgb(217, 217, 217)  ; 
   > a {
     color: $gray-900;
@@ -33,44 +33,48 @@
       color: #a3a3a3;
     }
   }
-  > .post-meta {
-    font-size: 15px;
-    font-style: italic;
-    font-weight: 300;
-    margin-top: 0.1rem;
-    color: $gray-600;
-    > a {
-      text-decoration: none;
-      color: $gray-900;
-      &:focus,
-      &:hover {
-        text-decoration: underline;
-        color: $primary;
+  > .post-preview-footer {    
+    > .post-meta {
+      font-size: 15px;
+      font-style: italic;
+      font-weight: 300;
+      margin-top: 0.1rem;
+      color: $gray-600;
+      > a {
+        text-decoration: none;
+        color: $gray-900;
+        &:focus,
+        &:hover {
+          text-decoration: underline;
+          color: $primary;
+        }
       }
     }
-  }
-  > .post-category {
-    font-size: 0.8125rem;
-    float: none;
-    color: black;
-    text-align: right;
-    padding-top: 0;
-    padding-bottom: 0; }
-  
-  .post-category a {
-      display: inline-block;
-      padding: 0.2125rem 0.9875rem;
-      margin-right: 0.1875rem;
-      color: $gray-600;
-      border: 0.0625rem solid $gray-600;
-      border-radius: 999em;
-      margin-bottom: 0.3125rem; }
-  
-  .post-category a:hover {
-    text-decoration: none;
-    border: 0.0625rem solid $mycolor;
-    color : $mycolor;
-  }
+    > .post-category {
+      font-size: 0.8125rem;
+      float: none;
+      color: black;    
+      float : right;
+      padding-top: 0;
+      padding-bottom: 0;
+      > a {
+        display: inline-block;
+        padding: 0rem 1.2rem;
+        margin-right: 0.1875rem;
+        color: $gray-600;
+        border: 0.0625rem solid $gray-600;
+        border-radius: 999em;
+        margin-bottom: 0.3125rem;
+        &:focus,
+        &:hover {
+          text-decoration: none;
+          border: 0.0625rem solid $mycolor;
+          color : $mycolor;
+        }
+      }
+    }
+  } 
+
   @media only screen and (min-width: 768px) {
     > a {
       > .post-title {
