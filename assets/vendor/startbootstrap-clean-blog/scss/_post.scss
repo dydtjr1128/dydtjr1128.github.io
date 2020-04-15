@@ -1,8 +1,8 @@
 // Styling for the post page
 .post-preview {
   visibility: hidden;
-  padding-bottom: 1.8rem;
-  margin-bottom : 1.8rem;
+  padding-bottom: 1.6rem;
+  margin-bottom : 1.6rem;
   border-bottom:1px solid rgb(217, 217, 217)  ; 
   > a {
     color: $gray-900;
@@ -33,7 +33,8 @@
       color: #a3a3a3;
     }
   }
-  > .post-preview-footer {    
+  > .post-preview-footer {
+    margin-top: 0.6rem;
     > .post-meta {
       font-size: 15px;
       font-style: italic;
