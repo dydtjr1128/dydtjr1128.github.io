@@ -43,11 +43,10 @@ python -m pip install --no-index --find-links="./" -r .\requirements.txt
 
 위 명령에 대한 옵션값입니다.
 
-```
---no-index                  Ignore package index (only looking at --find-
-                            links URLs instead).
--f, --find-links <url>      If a url or path to an html file, then parse for
-                            links to archives. If a local path or file://
-                            url that's a directory, then look for archives
+```text
+--no-index                  Ignore package index (only looking at --find- links URLs instead).
+
+-f, --find-links <url>      If a url or path to an html file, then parse for links to archives.
+                            If a local path or file://url that's a directory, then look for archives
                             in the directory listing.
 ```
