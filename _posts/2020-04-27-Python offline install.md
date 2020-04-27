@@ -2,13 +2,13 @@
 layout: post
 title:  "Python 파일 오프라인 설치"
 subtitle: "Install Python file offline"
-date: 2020-04-05 21:35:10 +0900
+date: 2020-04-27 17:35:10 +0900
 background: '/img/posts/07.jpg'
 comments: true
 catalog: true
-categories: CPP
-tags : CPP
-lastmod :   2020-04-05 21:35:10 +0900
+categories: Python
+tags : Python
+lastmod :   2020-04-27 17:35:10 +0900
 sitemap:
    changefreq: daily
    priority: 1.0
