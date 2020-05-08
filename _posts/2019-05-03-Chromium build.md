@@ -71,7 +71,7 @@ sitemap:
 Window 10 SDK가 이미 설치된 적이 없는경우
 
 - [https://developer.microsoft.com/ko-kr/windows/downloads/windows-10-sdk/](https://developer.microsoft.com/ko-kr/windows/downloads/windows-10-sdk/)
-- 위 링크에서 Windows SDK를 다운로드 받아 설치하시고 Debugging Tools For Windows 옵션을 추가해 설치해주면 된다.
+- 위 링크에서 Windows SDK를 다운로드 받아 설치 시 Debugging Tools For Windows 옵션을 추가 선택해 설치해주면 된다.
 
 Window 10 SDK가 이미 설치되어 있다면
 
