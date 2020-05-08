@@ -64,7 +64,7 @@ sitemap:
   
 이 두가지 부분은 설치 해주어야 한다.
 
-#### Windows SDK 설정
+#### 1.4 Windows SDK 설정
 
 크로미움의 경우 현재 Window 10 SDK 필요 버전이 10.0.18362 혹은 이상이 필요하다.
 
@@ -78,7 +78,7 @@ Window 10 SDK가 이미 설치되어 있다면
 제어판 -> 프로그램 -> 프로그램 및 기능 -> Windows Software Development Kit - 버전 -> 우클릭 후 변경 -> "Change" -> Debugging Tools For Windows 선택 -> Change
 에 들어가 Debugging Tools를 설치해주어야 한다.
 
-#### 1.4 depot_tools 사전 설정
+#### 1.5 depot_tools 사전 설정
 
 1. depot_tools 다운로드 => **[[다운로드 링크]](https://storage.googleapis.com/chrome-infra/depot_tools.zip "depot_tools 다운로드 링크")**
 2. `C:\src`에 압축해제
