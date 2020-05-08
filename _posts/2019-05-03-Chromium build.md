@@ -66,16 +66,16 @@ sitemap:
 
 #### 1.4 Windows SDK 설정
 
-크로미움의 경우 현재 Window 10 SDK 필요 버전이 10.0.18362 혹은 이상이 필요하다.
+크로미움의 경우 현재 `Window 10 SDK` 필요 버전이 10.0.18362 혹은 이상이 필요하다.
 
 Window 10 SDK가 이미 설치된 적이 없는경우
 
-- https://developer.microsoft.com/ko-kr/windows/downloads/windows-10-sdk/
-- 위 링크에서 Windows SDK를 다운로드 받아 설치하시고 Debugging Tools For Windows 옵션을 추가해 설치해주시면 된다.
+- [https://developer.microsoft.com/ko-kr/windows/downloads/windows-10-sdk/](https://developer.microsoft.com/ko-kr/windows/downloads/windows-10-sdk/)
+- 위 링크에서 Windows SDK를 다운로드 받아 설치하시고 Debugging Tools For Windows 옵션을 추가해 설치해주면 된다.
 
 Window 10 SDK가 이미 설치되어 있다면
 
-제어판 -> 프로그램 -> 프로그램 및 기능 -> Windows Software Development Kit - 버전 -> 우클릭 후 변경 -> "Change" -> Debugging Tools For Windows 선택 -> Change
+- 제어판 -> 프로그램 -> 프로그램 및 기능 -> Windows Software Development Kit - 버전 -> 우클릭 후 변경 -> "Change" -> Debugging Tools For Windows 선택 -> Change
 에 들어가 Debugging Tools를 설치해주어야 한다.
 
 #### 1.5 depot_tools 사전 설정
