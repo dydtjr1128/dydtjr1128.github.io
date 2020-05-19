@@ -1,6 +1,6 @@
 # Welcome to dydtjr1128's blog README
 
-This blog base clean blog jekyll.
+This blog base clean blog jekyll.  
 And many my customized views are applied.(like Table of Contents, animation, categories... etc)
 
 [Start Bootstrap - Clean Blog Jekyll](https://startbootstrap.com/template-overviews/clean-blog-jekyll/) - Official Jekyll Version
