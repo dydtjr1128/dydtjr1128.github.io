@@ -22,13 +22,17 @@ sitemap:
 1. 원하는 라이브러리 설치(ex.`pip install pylint`)
 2. 다운로드 목록 및 다운로드 내용을 가져올 폴더로 이동(cmd/bash 이용)
 3. 설치된 라이브러리 목록 파일로 저장
+
    ```python
    python -m pip freeze > requirements.txt
    ```
+
 4. 설치된 기록된 파일명 라이브러리들 다운로드
+
    ```python
    python -m pip download -r .\requirements.txt
    ```
+
 5. 이 폴더를 통째로 오프라인에서 설치할 컴퓨터로 복사
 
 다운로드 받은 파일들을 옮겨서 그 위치에서 파이썬을 실행 후 다음 명령어를 실행합니다.
@@ -39,7 +43,7 @@ python -m pip install --no-index --find-links="./" -r .\requirements.txt
 
 위의 명령어로 txt에 기록된 라이브러리들을 쉽게 설치 할 수 있습니다.
 
-#### appendix
+### Appendix
 
 위 명령에 대한 옵션값입니다.
 
