@@ -8,7 +8,7 @@ comments: true
 catalog: true
 categories: Python
 tags : Python
-lastmod :   2020-04-27 17:35:10 +0900
+lastmod :   2020-05-24 17:58:10 +0900
 sitemap:
    changefreq: daily
    priority: 1.0
@@ -23,13 +23,13 @@ sitemap:
 2. 다운로드 목록 및 다운로드 내용을 가져올 폴더로 이동(cmd/bash 이용)
 3. 설치된 라이브러리 목록 파일로 저장
 
-   ```python
+   ```bash
    python -m pip freeze > requirements.txt
    ```
 
 4. 설치된 기록된 파일명 라이브러리들 다운로드
 
-   ```python
+   ```bash
    python -m pip download -r .\requirements.txt
    ```
 
@@ -37,7 +37,7 @@ sitemap:
 
 다운로드 받은 파일들을 옮겨서 그 위치에서 파이썬을 실행 후 다음 명령어를 실행합니다.
 
-```python
+```bash
 python -m pip install --no-index --find-links="./" -r .\requirements.txt
 ```
 
