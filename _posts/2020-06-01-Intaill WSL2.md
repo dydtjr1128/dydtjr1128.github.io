@@ -33,7 +33,7 @@ sitemap:
 4. 마켓에서 WSL용 Unbuntu 다운로드 => [Ubuntu 마켓 링크](ms-windows-store://pdp?productId=9NBLGGH4MSV6&ocid=&cid=&referrer=unistoreweb&scenario=click&webig=240968bf-b51b-4194-98f7-d5014cbf6c4b&muid=0190504D4B686AFF1A215E6E4F686CAE&websession=90380ed73ffc4961975e0d2745520c77&tduid=)
 5. 다운이 완료되면 마켓에서 실행버튼을 클릭합니다.
 6. 우분투 설정을 진행합니다.(계정 및 암호)
-   ![ubuntu image](/img/WSL/ubuntu_setting.png){:width="40%"}{:.center}
+   ![ubuntu image](/img/WSL/ubuntu_setting.png)
 7. [우분투 커널 업데이트](https://docs.microsoft.com/ko-kr/windows/wsl/wsl2-kernel)링크에서 WSL 커널을 최신버전으로 업데이트 할 수 있는 툴을 다운로드 및 실행 합니다.
 8. 설정 환료 후 PowerShell에서 `wsl --set-version Ubuntu 2`으로 WSL 버전을 2로 설정 해 줍니다.
 
