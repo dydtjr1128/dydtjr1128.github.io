@@ -48,19 +48,9 @@
           </li>
           {% endif %}
         </ul>
-        <ul>
-          <li class="list-inline-item">
-            <a href="https://github.com/{{ site.github_username }}">
-              <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-        </ul>
         <p class="copyright text-muted">
-          <div>{{ site.email }}</div>
-          <div>Copyright &copy; {{ 'now' | date: "%Y" }}. Yongseok Choi. All rights reserved. </div>          
+          {{ site.email }}<br/>
+          Copyright &copy; {{ 'now' | date: "%Y" }}. Yongseok Choi. All rights reserved.
         </p>
       </div>
     </div>
