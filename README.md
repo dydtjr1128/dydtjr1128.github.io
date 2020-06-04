@@ -6,6 +6,9 @@ And many my customized views are applied.(like Table of Contents, animation, cat
 I record what I learned from studying on this blog.  
 I'm interested in various fields, so I don't upload only one field.
 
+
+## Base blog theme
+
 [Start Bootstrap - Clean Blog Jekyll](https://startbootstrap.com/template-overviews/clean-blog-jekyll/) - Official Jekyll Version
 
 ## Copyright and License
