@@ -9,7 +9,7 @@ I'm interested in various fields, so I don't upload only one field.
 
 ## Base blog theme
 
-[Start Bootstrap - Clean Blog Jekyll](https://startbootstrap.com/template-overviews/clean-blog-jekyll/) - Official Jekyll Version
+[Clean Blog Jekyll](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll) - Official github site
 
 ## Copyright and License
 
