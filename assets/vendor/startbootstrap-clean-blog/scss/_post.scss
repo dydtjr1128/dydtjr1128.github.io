@@ -344,3 +344,31 @@ body > div > div > div > p .center {
 .utterances {
   max-width: 100% !important;
 }
+
+
+//
+// Share
+//
+
+ .share {
+  margin-bottom: 30px;
+  border-top: 1px solid #eee;
+  color: #777;
+  font-size: 17px;
+}
+
+.share a {
+  border-bottom: none;
+}
+
+.twitter-share {
+  color: #1B95E0;
+}
+
+.facebook-share {
+  color: #3A5795;
+}
+
+.googleplus-share {
+  color: #E53935;
+}
