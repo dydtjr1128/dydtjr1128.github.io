@@ -1,0 +1,23 @@
+<div class="share">
+    <p>Share this post with: </p>
+	<a href="https://twitter.com/intent/tweet?text={{ page.title }}@{{ site.twitter_username }}&amp;url={{ page.url | replace:'index.html','' | absolute_url }}" class="twitter-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | replace:'index.html','' | absolute_url }}" class="facebook-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+
+	<a href="https://plus.google.com/share?url={{ page.url | replace:'index.html','' | absolute_url }}" class="googleplus-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fab fa-google-plus-g fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+</div>
