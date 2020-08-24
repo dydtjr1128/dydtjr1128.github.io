@@ -379,45 +379,11 @@ body > div > div > div > p .center {
 }
 
 
-[data-bottom-text]:hover {
-	position: relative;
-}
-
-[data-bottom-text]:hover:after {
-	background-color: #000000;
-	background-color: rgba(0, 0, 0, 0.8);
-
-	-webkit-box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
-	-moz-box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
-	box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
-
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-
-	color: #FFFFFF;
-	font-size: 12px;
-	content: attr(data-bottom-text);
-
-  margin-bottom: 10px;
-	top: 130%;
-	left: 0;    
-	padding: 7px 12px;
-	position: absolute;
-	width: auto;
-	min-width: 50px;
-	max-width: 300px;
-	word-wrap: break-word;
-
-	z-index: 9999;
-}
-
-
 [data-tooltip-text]:hover {
 	position: relative;
 }
 
-[data-tooltip-text]:hover:after {
+[data-tooltip-text]:after {
 	background-color: #000000;
 	background-color: rgba(0, 0, 0, 0.8);
 
@@ -431,11 +397,11 @@ body > div > div > div > p .center {
 
 	color: #FFFFFF;
 	font-size: 12px;
-	content: attr(data-tooltip-text);
+	content: attr(data-text);
 
   margin-bottom: 10px;
 	top: 130%;
-	left: 0;    
+	left: 25%;    
 	padding: 7px 12px;
 	position: absolute;
 	width: auto;
