@@ -26,7 +26,7 @@ MSA는 기존의 모놀리틱(Monolitic) 아키텍처의 대안으로 나왔으�
 
 ### 서비스 디스커버리(Service Discovery) - Eureka
 
-![msa.png](./img/spring/msa.png)
+![msa.png](../img/Spring/MSA/msa.png)
 
 | 이름 | 특징 | 단점 | 비고 |
 | --- | --- | --- | --- |
