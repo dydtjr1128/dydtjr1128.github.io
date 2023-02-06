@@ -42,3 +42,9 @@ PUT /_settings
 ```
 
 Default 값은 `Math.max(1, Math.min(4, <<node.processors, node.processors>> / 2))`를 따른다.
+
+### Reference
+
+<pre>
+<a href="https://www.elastic.co/kr/blog/performance-considerations-elasticsearch-indexing">[https://en.cppreference.com/w/cpp/thread/mutex](https://www.elastic.co/kr/blog/performance-considerations-elasticsearch-indexing)</a>
+</pre>
