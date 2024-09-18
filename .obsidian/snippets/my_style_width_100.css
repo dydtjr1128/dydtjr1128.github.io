@@ -1,0 +1,12 @@
+.my_style_width_100 .cm-sizer,
+.my_style_width_100 .cm-sizer .cm-contentContainer .cm-content,
+.my_style_width_100 .cm-sizer .cm-contentContainer .cm-content .cm-line,
+/* Reading View */
+.my_style_width_100 .markdown-preview-sizer.markdown-preview-section,
+.my_style_width_100 .markdown-preview-sizer.markdown-preview-section > div
+{
+  max-width: 100% !important;
+  width: 100% !important;
+  margin-left: initial !important;
+  margin-right: initial !important;
+}

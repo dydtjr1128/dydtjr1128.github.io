@@ -1,0 +1,224 @@
+{
+  "main": {
+    "id": "5aa82863e7b3497b",
+    "type": "split",
+    "children": [
+      {
+        "id": "fa51373495bab472",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f6ec5a49a67d8b6b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/무제 파일.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ec40891557ebb01d",
+    "type": "split",
+    "children": [
+      {
+        "id": "6db589512181b180",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f12cf89f7283acab",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "6027c45d9a09e478",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "7e7a1a695ad244aa",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          },
+          {
+            "id": "58cc89afc90249d6",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          },
+          {
+            "id": "17ca690aede19c41",
+            "type": "leaf",
+            "state": {
+              "type": "mk-path-view",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 230.5
+  },
+  "right": {
+    "id": "ff3c19e19f69ed73",
+    "type": "split",
+    "children": [
+      {
+        "id": "1a297b2e2812fac0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cd3c3e2356e00c05",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_posts/무제 파일.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "751f41c030c27338",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "_posts/무제 파일.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2dc4a7032168320b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "b94a192aca679cb6",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "_posts/무제 파일.md"
+              }
+            }
+          },
+          {
+            "id": "6c4d6b04d9e9673b",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "be17aac35bdf624b",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 383.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "switcher:퀵 스위처 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 데일리 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
+    }
+  },
+  "active": "f6ec5a49a67d8b6b",
+  "lastOpenFiles": [
+    "_posts/2023-02-06-elasticsearch hdd tuning.md",
+    "_posts/무제 파일.md",
+    "_posts/2017-05-20-Seoul bus API.md",
+    "Excalidraw/Drawing 2024-09-19 08.57.23.excalidraw.md",
+    "Excalidraw",
+    "Spaces",
+    "Pasted image 20240504001713.png",
+    "주식/배당주.md",
+    "주식/주식 이미지 스크랩.md",
+    "공부/프론트와 백엔드 사이의 시간 관리(UTC).md",
+    "공부/게시판에 컨텐츠와 댓글 따로 조회의 장점.md",
+    "공부/JPA Fetch join + Where 조건문 시 조건문 잘못 조회되는 현상.md",
+    "공부/공부.md",
+    "Pasted image 20240501222833.png",
+    "기타/소파.md",
+    "주식/주식.md",
+    "기타",
+    "새 폴더",
+    "공부/기타/기타.md",
+    "공부/기타",
+    "Pasted image 20240416141041.png",
+    "Pasted image 20240416141003.png",
+    "공부",
+    "Pasted image 20240406163335.png",
+    "Pasted image 20240406163319.png",
+    "Pasted image 20240406162734.png",
+    "Pasted image 20240406162304.png",
+    "README.md",
+    "Pasted image 20240406002043.png",
+    "Pasted image 20240406002016.png",
+    "2024-04-30.md",
+    "2023-12-13.md",
+    "주식",
+    "무제 파일.canvas",
+    "Excalidraw/Drawing 2023-12-13 09.32.40.excalidraw.md",
+    "Excalidraw/Drawing 2023-12-13 09.32.10.excalidraw.md",
+    "Excalidraw/Drawing 2023-12-13 09.32.18.excalidraw.md"
+  ]
+}

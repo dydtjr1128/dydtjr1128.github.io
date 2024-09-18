@@ -1,0 +1,29 @@
+{
+  "frames": [
+    {
+      "url": "https://www.therich.io/stock?ticker=JEPI&country=US",
+      "displayName": "더리치",
+      "icon": "",
+      "hideOnMobile": true,
+      "addRibbonIcon": false,
+      "openInCenter": false,
+      "zoomLevel": 1,
+      "forceIframe": false,
+      "customCss": "",
+      "customJs": ""
+    },
+    {
+      "url": "https://chat.openai.com/",
+      "displayName": "ChatGPT",
+      "icon": "<i data-lucide=\"brain\"></i>",
+      "hideOnMobile": true,
+      "addRibbonIcon": false,
+      "openInCenter": false,
+      "zoomLevel": 1,
+      "forceIframe": false,
+      "customCss": "",
+      "customJs": ""
+    }
+  ],
+  "padding": 5
+}

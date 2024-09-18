@@ -1,0 +1,12 @@
+.my_style_width_75 .cm-sizer,
+.my_style_width_75 .cm-sizer .cm-contentContainer .cm-content,
+.my_style_width_75 .cm-sizer .cm-contentContainer .cm-content .cm-line,
+/* Reading View */
+.my_style_width_75 .markdown-preview-sizer.markdown-preview-section,
+.my_style_width_75 .markdown-preview-sizer.markdown-preview-section > div
+{
+  max-width: 75% !important;
+  width: 75% !important;
+  margin-left: initial !important;
+  margin-right: initial !important;
+}
