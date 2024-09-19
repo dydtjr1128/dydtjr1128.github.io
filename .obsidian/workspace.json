@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "fa51373495bab472",
+        "id": "3e3dc220ed285ac0",
         "type": "tabs",
         "children": [
           {
-            "id": "f6ec5a49a67d8b6b",
+            "id": "9bd615b5507804c7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/무제 파일.md",
+                "file": "_posts/2023-02-06-elasticsearch hdd tuning.md",
                 "mode": "source",
                 "source": false
               }
@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/무제 파일.md",
+                "file": "_posts/2023-02-06-elasticsearch hdd tuning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/무제 파일.md",
+                "file": "_posts/2023-02-06-elasticsearch hdd tuning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/무제 파일.md"
+                "file": "_posts/2023-02-06-elasticsearch hdd tuning.md"
               }
             }
           },
@@ -181,11 +181,15 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "f6ec5a49a67d8b6b",
+  "active": "9bd615b5507804c7",
   "lastOpenFiles": [
-    "_posts/2023-02-06-elasticsearch hdd tuning.md",
     "_posts/무제 파일.md",
+    "_posts/2023-02-06-elasticsearch hdd tuning.md",
+    "_posts/2022-08-03-Hikari CP.md",
+    "_posts/2017-06-05-Ajax example.md",
     "_posts/2017-05-20-Seoul bus API.md",
+    "_posts/2020-06-01-Install WSL2.md",
+    "_posts/2021-11-30-kubernates.md",
     "Excalidraw/Drawing 2024-09-19 08.57.23.excalidraw.md",
     "Excalidraw",
     "Spaces",
