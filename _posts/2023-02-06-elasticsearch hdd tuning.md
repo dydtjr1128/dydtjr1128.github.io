@@ -14,7 +14,6 @@ sitemap:
   changefreq: daily
   priority: 1
 ---
-		
 ### Elasticsearch에서 HDD 사용시 성능 최적화
 
 하드디스크에서는 물리적으로 데이터를 읽는 방식이 기본적으로 헤드가 돌고있는 플래터를 읽는 Spinning 방식이기 때문에 동시에 여러데이터를 읽지 못한다.
