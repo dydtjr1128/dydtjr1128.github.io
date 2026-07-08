@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "AKS에서 ADLS 연동하기"
-subtitle: "저장 워커를 Workload Identity로 ADLS Gen2에 연결한 방식"
+subtitle: "Workload Identity로 ADLS Gen2에 연결한 방식"
 date: 2026-07-08 09:00:00 +0900
 lastmod: 2026-07-08 09:00:00 +0900
 background: /img/posts/07.jpg
@@ -19,18 +19,18 @@ tags:
 
 # AKS에서 ADLS로 데이터 저장하기
 
-회사에서 데이터 수집 플랫폼을 AKS 위에 구성할 일이 있었다. 수집된 데이터는 장기 보관과 분석을 위해 ADLS Gen2에 저장해야 했고, 애플리케이션은 컨테이너 환경에서 주기적으로 Parquet 파일을 생성해 업로드하는 구조였다.
+회사에서 AKS에 구성한 애플리케이션에서 ADLS Gen2를 저장소로 사용해야 하는 일이 있었다. 장기 보관과 분석을 고려하면 ADLS에 직접 적재하는 구성이 필요했고, 애플리케이션은 컨테이너 환경에서 생성한 파일을 ADLS로 업로드해야 했다.
 
-처음에는 스토리지 계정 키나 SAS 토큰을 Kubernetes Secret으로 주입하는 방식도 생각했지만, 장기간 운영해야 하는 환경에서 키를 직접 관리하는 방식은 교체와 노출 관리가 부담스러웠다. 그래서 AKS의 Workload Identity를 이용해 저장 워커 Pod가 Managed Identity로 ADLS에 접근하도록 구성하기로 했다.
+처음에는 스토리지 계정 키나 SAS 토큰을 Kubernetes Secret으로 주입하는 방식도 생각했지만, 장기간 운영해야 하는 환경에서 키를 직접 관리하는 방식은 교체와 노출 관리가 부담스러웠다. 그래서 AKS의 Workload Identity를 이용해 Pod가 Managed Identity로 ADLS에 접근하도록 구성하기로 했다.
 
 ## 적용 대상
 
-GitOps 기준으로는 데이터 저장을 담당하는 워커 차트가 대상이다. 글에서는 특정 chart 이름보다 어떤 Kubernetes 리소스를 어떻게 연결했는지 중심으로 정리한다.
+GitOps 기준으로는 ADLS 접근이 필요한 애플리케이션 chart가 대상이다. 글에서는 특정 chart 이름보다 어떤 Kubernetes 리소스를 어떻게 연결했는지 중심으로 정리한다.
 
 현재 구성은 다음 역할로 나뉜다.
 
 1. Azure Portal에서 AKS OIDC Issuer와 Workload Identity를 활성화한다.
-2. Azure Portal에서 저장 워커용 Managed Identity를 만든다.
+2. Azure Portal에서 애플리케이션용 Managed Identity를 만든다.
 3. ADLS가 연결된 스토리지 계정에 Managed Identity 권한을 부여한다.
 4. Managed Identity의 federated credential에 AKS namespace와 ServiceAccount를 연결한다.
 5. GitOps에서는 ServiceAccount annotation, Pod label, ADLS 환경 변수를 Helm chart로 관리한다.
@@ -40,7 +40,7 @@ GitOps 기준으로는 데이터 저장을 담당하는 워커 차트가 대상�
 
 ## GitOps 구성
 
-저장 워커 Deployment에서는 Workload Identity webhook이 동작하도록 Pod label을 넣고, 별도 ServiceAccount를 사용한다.
+Deployment에서는 Workload Identity webhook이 동작하도록 Pod label을 넣고, 별도 ServiceAccount를 사용한다.
 
 {% raw %}
 ```yaml
@@ -98,7 +98,7 @@ Azure 쪽에서는 모두 Portal UI에서 설정했다.
 
 AKS 리소스에서는 OIDC Issuer와 Workload Identity가 활성화되어 있는지 확인했다. 여기서 확인한 OIDC Issuer URL은 Managed Identity의 federated credential을 만들 때 사용했다.
 
-Managed Identity는 저장 워커 전용으로 만들고, 스토리지 계정의 `액세스 제어 (IAM)`에서 `Storage Blob 데이터 Contributor` 역할을 부여했다. ADLS Gen2도 스토리지 계정 권한 모델을 사용하기 때문에, 저장 워커가 파일을 생성하고 rename 하는 데 필요한 권한은 이 역할로 처리했다.
+Managed Identity는 애플리케이션 전용으로 만들고, 스토리지 계정의 `액세스 제어 (IAM)`에서 `Storage Blob 데이터 Contributor` 역할을 부여했다. ADLS Gen2도 스토리지 계정 권한 모델을 사용하기 때문에, 파일 생성과 rename에 필요한 권한은 이 역할로 처리했다.
 
 Federated credential에는 실제 GitOps에서 생성되는 namespace와 ServiceAccount 이름을 그대로 넣었다. 여기서 subject는 다음 형태가 된다.
 
@@ -110,7 +110,7 @@ system:serviceaccount:<namespace>:<service-account-name>
 
 ## 애플리케이션 코드
 
-저장 워커 코드에서는 ADLS 계정명과 filesystem 값을 환경 변수로 읽어 ADLS endpoint를 정한다. 인증은 `DefaultAzureCredentialBuilder`를 사용한다.
+애플리케이션 코드에서는 ADLS 계정명과 filesystem 값을 환경 변수로 읽어 ADLS endpoint를 정한다. 인증은 `DefaultAzureCredentialBuilder`를 사용한다.
 
 ```kotlin
 private val service = DataLakeServiceClientBuilder()
@@ -137,15 +137,9 @@ stageClient.renameWithResponse(
 
 이 방식으로 업로드 중인 임시 파일과 분석 대상이 되는 최종 파일을 분리했다. 최종 경로는 데이터 구분값과 날짜 기준의 파티션 구조로 정리된다.
 
-## 운영 시 고려한 부분
-
-저장 워커는 Parquet writer를 사용하기 때문에 Pod 종료 시점에 버퍼에 남은 파일을 안전하게 flush 해야 한다. GitOps Deployment에는 `preStop` hook으로 내부 flush endpoint를 호출하도록 구성되어 있다.
-
-또한 Deployment의 `replicas` 필드는 명시하지 않는다. 저장 워커는 KEDA가 만든 내부 HPA가 replicas를 관리하기 때문에, Deployment manifest가 replicas를 계속 되돌리면 Argo CD sync와 autoscaling이 충돌할 수 있다.
-
 ## 정리
 
-이번 ADLS 연동은 단순히 스토리지에 파일을 올리는 구성이 아니라, 수집된 데이터를 저장 워커가 Parquet으로 변환해 ADLS Gen2에 안정적으로 적재하는 흐름이다.
+이번 구성은 스토리지 계정 키나 SAS 토큰을 Pod에 직접 넣지 않고, Workload Identity와 Managed Identity로 ADLS Gen2에 접근하는 방식이다.
 
 이번 구성에서 핵심은 다음과 같다.
 

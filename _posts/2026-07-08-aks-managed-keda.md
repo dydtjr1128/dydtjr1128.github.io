@@ -50,7 +50,7 @@ KEDA가 내부적으로 HPA를 생성해 Deployment replicas를 조정하기 때
 
 ## 저장 워커 ScaledObject
 
-저장 워커는 메시징 계층의 데이터를 소비해 ADLS에 Parquet 파일을 쓰는 서비스다. 따라서 메시지 backlog를 가장 중요한 스케일링 기준으로 잡았다.
+저장 워커는 메시징 계층의 데이터를 소비하는 서비스다. 따라서 메시지 backlog를 가장 중요한 스케일링 기준으로 잡았다.
 
 {% raw %}
 ```yaml
@@ -118,7 +118,7 @@ spec:
 ```
 {% endraw %}
 
-ADLS 접근은 Workload Identity를 사용하지만, backlog 확인용 인증은 현재 별도 TriggerAuthentication으로 분리되어 있다. 추후 이 인증도 Workload Identity 기반으로 통일할 수 있는지 검토할 수 있다.
+backlog 확인용 인증은 `TriggerAuthentication`으로 분리했다. 애플리케이션 런타임 인증과 KEDA trigger 인증은 동작 주체가 다르기 때문에 별도로 관리했다.
 
 ## 수집 API ScaledObject
 
