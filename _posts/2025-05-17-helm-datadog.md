@@ -99,6 +99,7 @@ clusterAgent:
 
 
 ## Datadog deployment.yaml 설정 예시
+{% raw %}
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -233,4 +234,4 @@ spec:
             failureThreshold: 3
           imagePullPolicy: {{ .Values.image.pullPolicy }}
 ```
-
+{% endraw %}
