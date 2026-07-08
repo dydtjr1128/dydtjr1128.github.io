@@ -2,8 +2,8 @@
 layout: post
 title: "AKS에서 Azure Managed KEDA 사용하기"
 subtitle: "ScaledObject 기반 오토스케일링 구성"
-date: 2026-07-09 10:30:00 +0900
-lastmod: 2026-07-09 10:30:00 +0900
+date: 2026-07-08 09:20:00 +0900
+lastmod: 2026-07-08 09:20:00 +0900
 background: /img/posts/07.jpg
 comments: true
 catalog: true

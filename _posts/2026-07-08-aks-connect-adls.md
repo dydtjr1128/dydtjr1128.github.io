@@ -2,8 +2,8 @@
 layout: post
 title: "AKS에서 ADLS 연동하기"
 subtitle: "저장 워커를 Workload Identity로 ADLS Gen2에 연결한 방식"
-date: 2026-07-09 10:00:00 +0900
-lastmod: 2026-07-09 10:00:00 +0900
+date: 2026-07-08 09:00:00 +0900
+lastmod: 2026-07-08 09:00:00 +0900
 background: /img/posts/07.jpg
 comments: true
 catalog: true

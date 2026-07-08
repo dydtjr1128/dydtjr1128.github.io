@@ -2,8 +2,8 @@
 layout: post
 title: "AKS에서 Key Vault와 ExternalSecret 연동하기"
 subtitle: "External Secrets Operator로 애플리케이션 Secret을 관리한 방식"
-date: 2026-07-09 10:00:00 +0900
-lastmod: 2026-07-09 10:00:00 +0900
+date: 2026-07-08 09:10:00 +0900
+lastmod: 2026-07-08 09:10:00 +0900
 background: /img/posts/07.jpg
 comments: true
 catalog: true
